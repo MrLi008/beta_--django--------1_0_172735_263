@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 周报表(weeklyrepkwkworts)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_pie_v2",'weeklyrepkwkworts.weekstartdate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_pie_v1",'weeklyrepkwkworts.weekstartdate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_pie",'weeklyrepkwkworts.weekstartdate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** line***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_line",'weeklyrepkwkworts.weekstartdate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_bar",'weeklyrepkwkworts.weekstartdate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekstartdate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周开始日期 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_weekstartdate_bar_v1",'weeklyrepkwkworts.weekstartdate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_weekenddate_pie_v2",'weeklyrepkwkworts.weekenddate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_weekenddate_pie_v1",'weeklyrepkwkworts.weekenddate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_weekenddate_pie",'weeklyrepkwkworts.weekenddate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** line***/ init_echart("echart_weeklyrepkwkworts_weekenddate_line",'weeklyrepkwkworts.weekenddate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_weekenddate_bar",'weeklyrepkwkworts.weekenddate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_weekenddate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 周结束日期 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_weekenddate_bar_v1",'weeklyrepkwkworts.weekenddate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_department_pie_v2",'weeklyrepkwkworts.department_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_department_pie_v1",'weeklyrepkwkworts.department_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_department_pie",'weeklyrepkwkworts.department_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** line***/ init_echart("echart_weeklyrepkwkworts_department_line",'weeklyrepkwkworts.department_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_department_bar",'weeklyrepkwkworts.department_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_department_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 部门 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_department_bar_v1",'weeklyrepkwkworts.department_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_employeename_pie_v2",'weeklyrepkwkworts.employeename_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_employeename_pie_v1",'weeklyrepkwkworts.employeename_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_employeename_pie",'weeklyrepkwkworts.employeename_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** line***/ init_echart("echart_weeklyrepkwkworts_employeename_line",'weeklyrepkwkworts.employeename_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_employeename_bar",'weeklyrepkwkworts.employeename_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_employeename_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 员工姓名 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_employeename_bar_v1",'weeklyrepkwkworts.employeename_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_pie_v2",'weeklyrepkwkworts.repkwkwortcontent_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_pie_v1",'weeklyrepkwkworts.repkwkwortcontent_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_pie",'weeklyrepkwkworts.repkwkwortcontent_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** line***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_line",'weeklyrepkwkworts.repkwkwortcontent_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_bar",'weeklyrepkwkworts.repkwkwortcontent_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_repkwkwortcontent_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 报告内容 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_repkwkwortcontent_bar_v1",'weeklyrepkwkworts.repkwkwortcontent_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_status_pie_v2",'weeklyrepkwkworts.status_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_status_pie_v1",'weeklyrepkwkworts.status_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_status_pie",'weeklyrepkwkworts.status_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** line***/ init_echart("echart_weeklyrepkwkworts_status_line",'weeklyrepkwkworts.status_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_status_bar",'weeklyrepkwkworts.status_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_status_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 状态 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_status_bar_v1",'weeklyrepkwkworts.status_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_createdat_pie_v2",'weeklyrepkwkworts.createdat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_createdat_pie_v1",'weeklyrepkwkworts.createdat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_createdat_pie",'weeklyrepkwkworts.createdat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** line***/ init_echart("echart_weeklyrepkwkworts_createdat_line",'weeklyrepkwkworts.createdat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_createdat_bar",'weeklyrepkwkworts.createdat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_createdat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 创建时间 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_createdat_bar_v1",'weeklyrepkwkworts.createdat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** pie_v2***/ init_echart("echart_weeklyrepkwkworts_updatedat_pie_v2",'weeklyrepkwkworts.updatedat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** pie_v1***/ init_echart("echart_weeklyrepkwkworts_updatedat_pie_v1",'weeklyrepkwkworts.updatedat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_pie" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** pie***/ init_echart("echart_weeklyrepkwkworts_updatedat_pie",'weeklyrepkwkworts.updatedat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_line" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** line***/ init_echart("echart_weeklyrepkwkworts_updatedat_line",'weeklyrepkwkworts.updatedat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_bar" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** bar***/ init_echart("echart_weeklyrepkwkworts_updatedat_bar",'weeklyrepkwkworts.updatedat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_weeklyrepkwkworts_updatedat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 周报表 更新时间 ******************** bar_v1***/ init_echart("echart_weeklyrepkwkworts_updatedat_bar_v1",'weeklyrepkwkworts.updatedat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

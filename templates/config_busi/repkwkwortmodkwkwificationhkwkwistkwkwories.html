@@ -1,0 +1,933 @@
+{% extends '../tp.html' %}
+
+{% block title %}
+报告修改历史表
+{% endblock %}
+
+{% block body %}
+  <div class="my-container-margin">
+    <div class="divider"></div>
+    {% csrf_token %}
+    <div class="section">
+      <h4>报告修改历史表</h4>
+      <div>
+        <div class="row">
+          
+          {% if has_add %}
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalinsert" class="waves-effect waves-light btn">添加</button>
+          {% endif %}
+          <div class="divider"></div>
+        
+        
+          
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<a href="/config_visual/bi_tprepkwkwortmodkwkwificationhkwkwistkwkwories" target="_blank" class="waves-effect waves-light btn">
+统计分析
+</a>
+</div>
+        </div>  
+        <div class="section">
+          {% if record %}
+            <h3>Empty Data</h3>
+          {% else %}
+          
+<div class="row">
+<form action="" method="get">
+
+
+
+
+<div class="form-group">
+<label for="repkwkwortid">关联的报告ID(repkwkwortid)</label>
+<select name="repkwkwortid_search" id="repkwkwortid_search">
+<option value="">未选择</option>
+{% for record in data_mc_weeklyrepkwkworts_55420 %}
+<option value="{{record.value}}">
+<p>{{record.value}}:{{record.label }}</p>
+</option>
+{% endfor %}
+</select>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-2">
+<button type="submit" class="btn btn-primary" >
+<i class="fas fa-search">搜索</i>
+</button>
+<a type="reset" class="btn btn-default" href="/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories">
+<i class="fas fa-eraser">重置</i>
+</a>
+</div>
+</form>
+
+          </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  
+{% if mcauthfield_id.mcauthview %}
+<td>
+唯一标识符
+</td>
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+<td>
+关联的报告ID
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtime.mcauthview %}
+<td>
+修改时间
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwifierid.mcauthview %}
+<td>
+修改者ID
+</td>
+{% endif %}
+
+{% if mcauthfield_previouscontent.mcauthview %}
+<td>
+修改前的内容摘要
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedcontent.mcauthview %}
+<td>
+修改后的内容摘要
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtype.mcauthview %}
+<td>
+修改类型如内容更新、状态变更等
+</td>
+{% endif %}
+
+{% if mcauthfield_comment.mcauthview %}
+<td>
+修改备注
+</td>
+{% endif %}
+
+{% if mcauthfield_kwkwislatest.mcauthview %}
+<td>
+是否为最新修改用于快速检索最新记录
+</td>
+{% endif %}
+<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    
+ {% if mcauthfield_id.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.id}}">
+{{record.id}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_repkwkwortid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkwortid}}">
+{{record.repkwkwortid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwificationtime.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.modkwkwificationtime}}">
+{{record.modkwkwificationtime}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwifierid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.modkwkwifierid}}">
+{{record.modkwkwifierid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_previouscontent.mcauthview %}
+<td class="text-nowrap-cell">
+
+{% if record.previouscontent %}
+{{record.previouscontent.name}}
+<p title="{{record.previouscontent}}">
+{{record.previouscontent|truncatechars:20}}
+</p>
+{% endif %}
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwifiedcontent.mcauthview %}
+<td class="text-nowrap-cell">
+
+{% if record.modkwkwifiedcontent %}
+{{record.modkwkwifiedcontent.name}}
+<p title="{{record.modkwkwifiedcontent}}">
+{{record.modkwkwifiedcontent|truncatechars:20}}
+</p>
+{% endif %}
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwificationtype.mcauthview %}
+<td class="text-nowrap-cell">
+
+{% if record.modkwkwificationtype %}
+{{record.modkwkwificationtype.name}}
+<p title="{{record.modkwkwificationtype}}">
+{{record.modkwkwificationtype|truncatechars:20}}
+</p>
+{% endif %}
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_comment.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.comment}}">
+{{record.comment}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_kwkwislatest.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.kwkwislatest}}">
+{{record.kwkwislatest}}
+</p>
+
+</td>
+{% endif %}
+ <td>
+                      {% if has_upd %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalupdate">修改</button>
+                      {% endif %}
+                      {% if has_del %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalremove">删除</button>
+                      {% endif %}
+                      {% if has_view %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalpreview">查看</button>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  <!-- Modal Structure -->
+
+  {% if has_add %}
+    <div id="modalinsert" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h4>添加</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="add" hidden />{% csrf_token %}<div class="">
+        {% if mcauthfield_id.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="id" class="form-label form-group">唯一标识符</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_repkwkwortid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortid" class="form-label form-group">关联的报告ID</label>
+
+<select class="form-select form-select-lg mb-3" name="repkwkwortid" id="repkwkwortid" {% if not mcauthfield_repkwkwortid.mcisblank %}required {% endif %} data-name="insert"> <option value="" selected>未选择</option> {% for record in data_mc_weeklyrepkwkworts_55420 %} 
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+ {% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwificationtime.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwificationtime" class="form-label form-group">修改时间</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwifierid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwifierid" class="form-label form-group">修改者ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_previouscontent.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="previouscontent" class="form-label form-group">修改前的内容摘要</label>
+
+<textarea class="form-control form-control-lg" name="previouscontent" id="previouscontent" {% if not mcauthfield_previouscontent.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwifiedcontent.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwifiedcontent" class="form-label form-group">修改后的内容摘要</label>
+
+<textarea class="form-control form-control-lg" name="modkwkwifiedcontent" id="modkwkwifiedcontent" {% if not mcauthfield_modkwkwifiedcontent.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwificationtype.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwificationtype" class="form-label form-group">修改类型如内容更新、状态变更等</label>
+
+<textarea class="form-control form-control-lg" name="modkwkwificationtype" id="modkwkwificationtype" {% if not mcauthfield_modkwkwificationtype.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_comment.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="comment" class="form-label form-group">修改备注</label>
+
+<input type="text" class="form-control form-control-lg" name="comment" id="comment"{% if not mcauthfield_comment.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_kwkwislatest.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="kwkwislatest" class="form-label form-group">是否为最新修改用于快速检索最新记录</label>
+
+<select class="form-select form-select-lg mb-3" name="kwkwislatest" id="kwkwislatest" {% if not mcauthfield_kwkwislatest.mcisblank %}required {% endif %} data-name="insert">
+<option value="True" selected >是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="modal-action modal-close btn-primary btn waves-effect waves-light">提交</button>
+                  <button type="reset" class="modal-action modal-close btn-default btn waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_upd %}
+    <div id="modalupdate" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">修改</div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="upd" hidden />{% csrf_token %}<input type="text" name="_id_upd" value="" data-name="update_id" hidden />
+                <div class="">
+           {% if mcauthfield_id.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="id_upd"
+class="form-label form-group">
+唯一标识符(id)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_repkwkwortid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkwortid_upd"
+class="form-label form-group">
+关联的报告ID(repkwkwortid)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="repkwkwortid"
+id="repkwkwortid_upd"
+{% if not mcauthfield_repkwkwortid.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_repkwkwortid.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="">未选择</option>
+{% for record in data_mc_weeklyrepkwkworts_55420 %}
+
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+
+{% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwificationtime.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwificationtime_upd"
+class="form-label form-group">
+修改时间(modkwkwificationtime)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwifierid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwifierid_upd"
+class="form-label form-group">
+修改者ID(modkwkwifierid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_previouscontent.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="previouscontent_upd"
+class="form-label form-group">
+修改前的内容摘要(previouscontent)
+</label>
+
+<textarea type="text" class="validate form-control form-control-lg"
+name="previouscontent"
+id="previouscontent_upd"
+placeholder="修改前的内容摘要"
+{% if not mcauthfield_previouscontent.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_previouscontent.mcauthchange %}
+readonly
+{% endif %}
+data-name="update"></textarea>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwifiedcontent.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwifiedcontent_upd"
+class="form-label form-group">
+修改后的内容摘要(modkwkwifiedcontent)
+</label>
+
+<textarea type="text" class="validate form-control form-control-lg"
+name="modkwkwifiedcontent"
+id="modkwkwifiedcontent_upd"
+placeholder="修改后的内容摘要"
+{% if not mcauthfield_modkwkwifiedcontent.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_modkwkwifiedcontent.mcauthchange %}
+readonly
+{% endif %}
+data-name="update"></textarea>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwificationtype.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwificationtype_upd"
+class="form-label form-group">
+修改类型如内容更新、状态变更等(modkwkwificationtype)
+</label>
+
+<textarea type="text" class="validate form-control form-control-lg"
+name="modkwkwificationtype"
+id="modkwkwificationtype_upd"
+placeholder="修改类型如内容更新、状态变更等"
+{% if not mcauthfield_modkwkwificationtype.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_modkwkwificationtype.mcauthchange %}
+readonly
+{% endif %}
+data-name="update"></textarea>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_comment.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="comment_upd"
+class="form-label form-group">
+修改备注(comment)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="comment"
+id="comment_upd"
+placeholder="修改备注"
+{% if not mcauthfield_comment.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_comment.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_kwkwislatest.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="kwkwislatest_upd"
+class="form-label form-group">
+是否为最新修改用于快速检索最新记录(kwkwislatest)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="kwkwislatest"
+id="kwkwislatest_upd"
+{% if not mcauthfield_kwkwislatest.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_kwkwislatest.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="True" selected>是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">提交</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_del %}
+    <div id="modalremove" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">删除</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>确认删除这条记录吗?</p>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="del" hidden />{% csrf_token %}<input type="text" name="_id" value="" data-name="remove" hidden />
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">确认</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_view %}
+    <div id="modalpreview" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <h4>预览</h4>
+          <div class="">
+            
+{% if mcauthfield_id.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">唯一标识符</p>
+
+<p id="id_view">
+{{record.id|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">关联的报告ID</p>
+
+<p id="repkwkwortid_view">
+{{record.repkwkwortid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtime.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改时间</p>
+
+<p id="modkwkwificationtime_view">
+{{record.modkwkwificationtime|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwifierid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改者ID</p>
+
+<p id="modkwkwifierid_view">
+{{record.modkwkwifierid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_previouscontent.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改前的内容摘要</p>
+
+<p id="previouscontent_view">
+{{record.previouscontent|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedcontent.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改后的内容摘要</p>
+
+<p id="modkwkwifiedcontent_view">
+{{record.modkwkwifiedcontent|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtype.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改类型如内容更新、状态变更等</p>
+
+<p id="modkwkwificationtype_view">
+{{record.modkwkwificationtype|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_comment.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改备注</p>
+
+<p id="comment_view">
+{{record.comment|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_kwkwislatest.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">是否为最新修改用于快速检索最新记录</p>
+
+<p id="kwkwislatest_view">
+{{record.kwkwislatest|safe }}
+</p>
+
+</div>
+{% endif %}
+<div class="modal-footer">
+              <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block script-footer %}
+<script>
+  function myreset(){
+window.location.href= "/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories";
+};
+if (document.getElementById("modalupdate")){
+document.getElementById("modalupdate").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+{% if mcauthfield_id.mcauthview %}
+$("#id_upd").val(resp.ins.id);
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+$("#repkwkwortid_upd").val(resp.ins.repkwkwortid);
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtime.mcauthview %}
+$("#modkwkwificationtime_upd").val(resp.ins.modkwkwificationtime);
+{% endif %}
+
+{% if mcauthfield_modkwkwifierid.mcauthview %}
+$("#modkwkwifierid_upd").val(resp.ins.modkwkwifierid);
+{% endif %}
+
+{% if mcauthfield_previouscontent.mcauthview %}
+$("#previouscontent_upd").val(resp.ins.previouscontent);
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedcontent.mcauthview %}
+$("#modkwkwifiedcontent_upd").val(resp.ins.modkwkwifiedcontent);
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtype.mcauthview %}
+$("#modkwkwificationtype_upd").val(resp.ins.modkwkwificationtype);
+{% endif %}
+
+{% if mcauthfield_comment.mcauthview %}
+$("#comment_upd").val(resp.ins.comment);
+{% endif %}
+
+{% if mcauthfield_kwkwislatest.mcauthview %}
+$("#kwkwislatest_upd").val(resp.ins.kwkwislatest);
+{% endif %}
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+function upd(_id){
+let data = {
+optype:'get',
+_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value,
+
+{% if mcauthfield_id.mcauthchange %}
+id:$("#id_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthchange %}
+repkwkwortid:$("#repkwkwortid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtime.mcauthchange %}
+modkwkwificationtime:$("#modkwkwificationtime_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwifierid.mcauthchange %}
+modkwkwifierid:$("#modkwkwifierid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_previouscontent.mcauthchange %}
+previouscontent:$("#previouscontent_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedcontent.mcauthchange %}
+modkwkwifiedcontent:$("#modkwkwifiedcontent_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwificationtype.mcauthchange %}
+modkwkwificationtype:$("#modkwkwificationtype_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_comment.mcauthchange %}
+comment:$("#comment_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_kwkwislatest.mcauthchange %}
+kwkwislatest:$("#kwkwislatest_upd]").val(),
+{% endif %}
+
+}
+$.ajax({
+url: '/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories',
+method: 'post',
+data: data,
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+if (document.getElementById("modalpreview")) {
+document.getElementById("modalpreview").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+
+
+{% if mcauthfield_id.mcauthview %}
+document.getElementById("id_view").innerHTML=resp.ins.id;
+{% endif %}
+
+
+
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+document.getElementById("repkwkwortid_view").innerHTML=resp.ins.repkwkwortid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwificationtime.mcauthview %}
+document.getElementById("modkwkwificationtime_view").innerHTML=resp.ins.modkwkwificationtime;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwifierid.mcauthview %}
+document.getElementById("modkwkwifierid_view").innerHTML=resp.ins.modkwkwifierid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_previouscontent.mcauthview %}
+document.getElementById("previouscontent_view").innerHTML=resp.ins.previouscontent;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwifiedcontent.mcauthview %}
+document.getElementById("modkwkwifiedcontent_view").innerHTML=resp.ins.modkwkwifiedcontent;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwificationtype.mcauthview %}
+document.getElementById("modkwkwificationtype_view").innerHTML=resp.ins.modkwkwificationtype;
+{% endif %}
+
+
+
+
+{% if mcauthfield_comment.mcauthview %}
+document.getElementById("comment_view").innerHTML=resp.ins.comment;
+{% endif %}
+
+
+
+
+{% if mcauthfield_kwkwislatest.mcauthview %}
+document.getElementById("kwkwislatest_view").innerHTML=resp.ins.kwkwislatest;
+{% endif %}
+
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+if (document.getElementById("modalremove")) {
+document.getElementById("modalremove").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=remove]").val(_id);
+});
+};
+function del(_id){
+$.ajax({
+url: '/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories',
+method: 'post',
+data: {optype:'del',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+</script>
+{% endblock %}

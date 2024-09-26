@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 通知类型表(notkwkwificationtypes)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_pie_v2",'notkwkwificationtypes.notkwkwificationtypename_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_pie_v1",'notkwkwificationtypes.notkwkwificationtypename_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** pie***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_pie",'notkwkwificationtypes.notkwkwificationtypename_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** line***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_line",'notkwkwificationtypes.notkwkwificationtypename_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** bar***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_bar",'notkwkwificationtypes.notkwkwificationtypename_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_notkwkwificationtypename_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 通知类型名称 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_notkwkwificationtypename_bar_v1",'notkwkwificationtypes.notkwkwificationtypename_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_description_pie_v2",'notkwkwificationtypes.description_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_description_pie_v1",'notkwkwificationtypes.description_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** pie***/ init_echart("echart_notkwkwificationtypes_description_pie",'notkwkwificationtypes.description_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** line***/ init_echart("echart_notkwkwificationtypes_description_line",'notkwkwificationtypes.description_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** bar***/ init_echart("echart_notkwkwificationtypes_description_bar",'notkwkwificationtypes.description_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_description_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 描述 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_description_bar_v1",'notkwkwificationtypes.description_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_createddate_pie_v2",'notkwkwificationtypes.createddate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_createddate_pie_v1",'notkwkwificationtypes.createddate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** pie***/ init_echart("echart_notkwkwificationtypes_createddate_pie",'notkwkwificationtypes.createddate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** line***/ init_echart("echart_notkwkwificationtypes_createddate_line",'notkwkwificationtypes.createddate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** bar***/ init_echart("echart_notkwkwificationtypes_createddate_bar",'notkwkwificationtypes.createddate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createddate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建日期 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_createddate_bar_v1",'notkwkwificationtypes.createddate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_createdby_pie_v2",'notkwkwificationtypes.createdby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_createdby_pie_v1",'notkwkwificationtypes.createdby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** pie***/ init_echart("echart_notkwkwificationtypes_createdby_pie",'notkwkwificationtypes.createdby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** line***/ init_echart("echart_notkwkwificationtypes_createdby_line",'notkwkwificationtypes.createdby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** bar***/ init_echart("echart_notkwkwificationtypes_createdby_bar",'notkwkwificationtypes.createdby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_createdby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 创建者 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_createdby_bar_v1",'notkwkwificationtypes.createdby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_pie_v2",'notkwkwificationtypes.modkwkwifieddate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_pie_v1",'notkwkwificationtypes.modkwkwifieddate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** pie***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_pie",'notkwkwificationtypes.modkwkwifieddate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** line***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_line",'notkwkwificationtypes.modkwkwifieddate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** bar***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_bar",'notkwkwificationtypes.modkwkwifieddate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifieddate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改日期 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_modkwkwifieddate_bar_v1",'notkwkwificationtypes.modkwkwifieddate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_pie_v2",'notkwkwificationtypes.modkwkwifiedby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_pie_v1",'notkwkwificationtypes.modkwkwifiedby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** pie***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_pie",'notkwkwificationtypes.modkwkwifiedby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** line***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_line",'notkwkwificationtypes.modkwkwifiedby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** bar***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_bar",'notkwkwificationtypes.modkwkwifiedby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_modkwkwifiedby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 修改者 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_modkwkwifiedby_bar_v1",'notkwkwificationtypes.modkwkwifiedby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** pie_v2***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_pie_v2",'notkwkwificationtypes.skwkwortorder_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** pie_v1***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_pie_v1",'notkwkwificationtypes.skwkwortorder_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_pie" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** pie***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_pie",'notkwkwificationtypes.skwkwortorder_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_line" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** line***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_line",'notkwkwificationtypes.skwkwortorder_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_bar" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** bar***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_bar",'notkwkwificationtypes.skwkwortorder_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_notkwkwificationtypes_skwkwortorder_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 通知类型表 排序顺序 ******************** bar_v1***/ init_echart("echart_notkwkwificationtypes_skwkwortorder_bar_v1",'notkwkwificationtypes.skwkwortorder_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

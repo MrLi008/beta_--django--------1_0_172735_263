@@ -1,0 +1,1016 @@
+{% extends '../tp.html' %}
+
+{% block title %}
+短信发送记录表
+{% endblock %}
+
+{% block body %}
+  <div class="my-container-margin">
+    <div class="divider"></div>
+    {% csrf_token %}
+    <div class="section">
+      <h4>短信发送记录表</h4>
+      <div>
+        <div class="row">
+          
+          {% if has_add %}
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalinsert" class="waves-effect waves-light btn">添加</button>
+          {% endif %}
+          <div class="divider"></div>
+        
+        
+          
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<a href="/config_visual/bi_tpsmslogs" target="_blank" class="waves-effect waves-light btn">
+统计分析
+</a>
+</div>
+        </div>  
+        <div class="section">
+          {% if record %}
+            <h3>Empty Data</h3>
+          {% else %}
+          
+<div class="row">
+<form action="" method="get">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+<label for="relatedtkwkwaskid">关联任务ID如果短信发送与某个特定任务相关(relatedtkwkwaskid)</label>
+<select name="relatedtkwkwaskid_search" id="relatedtkwkwaskid_search">
+<option value="">未选择</option>
+{% for record in data_mc_repkwkwortperiods_55389 %}
+<option value="{{record.value}}">
+<p>{{record.value}}:{{record.label }}</p>
+</option>
+{% endfor %}
+</select>
+</div>
+
+
+<div class="col-sm-2">
+<button type="submit" class="btn btn-primary" >
+<i class="fas fa-search">搜索</i>
+</button>
+<a type="reset" class="btn btn-default" href="/config_busi/smslogs">
+<i class="fas fa-eraser">重置</i>
+</a>
+</div>
+</form>
+
+          </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  
+{% if mcauthfield_id.mcauthview %}
+<td>
+唯一标识符
+</td>
+{% endif %}
+
+{% if mcauthfield_smscontent.mcauthview %}
+<td>
+短信内容
+</td>
+{% endif %}
+
+{% if mcauthfield_receivernumber.mcauthview %}
+<td>
+接收者号码
+</td>
+{% endif %}
+
+{% if mcauthfield_sendernumber.mcauthview %}
+<td>
+发送者号码
+</td>
+{% endif %}
+
+{% if mcauthfield_sendtime.mcauthview %}
+<td>
+发送时间
+</td>
+{% endif %}
+
+{% if mcauthfield_status.mcauthview %}
+<td>
+发送状态如成功、失败、待发送
+</td>
+{% endif %}
+
+{% if mcauthfield_rekwkwtrycount.mcauthview %}
+<td>
+重试次数
+</td>
+{% endif %}
+
+{% if mcauthfield_errkwkwormessage.mcauthview %}
+<td>
+错误信息如果发送失败
+</td>
+{% endif %}
+
+{% if mcauthfield_kwkwisread.mcauthview %}
+<td>
+是否已读标记接收者是否已查看短信
+</td>
+{% endif %}
+
+{% if mcauthfield_relatedtkwkwaskid.mcauthview %}
+<td>
+关联任务ID如果短信发送与某个特定任务相关
+</td>
+{% endif %}
+<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    
+ {% if mcauthfield_id.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.id}}">
+{{record.id}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_smscontent.mcauthview %}
+<td class="text-nowrap-cell">
+
+{% if record.smscontent %}
+{{record.smscontent.name}}
+<p title="{{record.smscontent}}">
+{{record.smscontent|truncatechars:20}}
+</p>
+{% endif %}
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_receivernumber.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.receivernumber}}">
+{{record.receivernumber}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_sendernumber.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.sendernumber}}">
+{{record.sendernumber}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_sendtime.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.sendtime}}">
+{{record.sendtime}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_status.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.status}}">
+{{record.status}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_rekwkwtrycount.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.rekwkwtrycount}}">
+{{record.rekwkwtrycount}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_errkwkwormessage.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.errkwkwormessage}}">
+{{record.errkwkwormessage}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_kwkwisread.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.kwkwisread}}">
+{{record.kwkwisread}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_relatedtkwkwaskid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.relatedtkwkwaskid}}">
+{{record.relatedtkwkwaskid}}
+</p>
+
+</td>
+{% endif %}
+ <td>
+                      {% if has_upd %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalupdate">修改</button>
+                      {% endif %}
+                      {% if has_del %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalremove">删除</button>
+                      {% endif %}
+                      {% if has_view %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalpreview">查看</button>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  <!-- Modal Structure -->
+
+  {% if has_add %}
+    <div id="modalinsert" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h4>添加</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="add" hidden />{% csrf_token %}<div class="">
+        {% if mcauthfield_id.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="id" class="form-label form-group">唯一标识符</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_smscontent.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="smscontent" class="form-label form-group">短信内容</label>
+
+<textarea class="form-control form-control-lg" name="smscontent" id="smscontent" {% if not mcauthfield_smscontent.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_receivernumber.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="receivernumber" class="form-label form-group">接收者号码</label>
+
+<input type="text" class="form-control form-control-lg" name="receivernumber" id="receivernumber"{% if not mcauthfield_receivernumber.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_sendernumber.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="sendernumber" class="form-label form-group">发送者号码</label>
+
+<input type="text" class="form-control form-control-lg" name="sendernumber" id="sendernumber"{% if not mcauthfield_sendernumber.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_sendtime.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="sendtime" class="form-label form-group">发送时间</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_status.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="status" class="form-label form-group">发送状态如成功、失败、待发送</label>
+
+<input type="text" class="form-control form-control-lg" name="status" id="status"{% if not mcauthfield_status.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_rekwkwtrycount.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="rekwkwtrycount" class="form-label form-group">重试次数</label>
+
+<input type="text" class="form-control form-control-lg" name="rekwkwtrycount" id="rekwkwtrycount"{% if not mcauthfield_rekwkwtrycount.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_errkwkwormessage.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="errkwkwormessage" class="form-label form-group">错误信息如果发送失败</label>
+
+<input type="text" class="form-control form-control-lg" name="errkwkwormessage" id="errkwkwormessage"{% if not mcauthfield_errkwkwormessage.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_kwkwisread.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="kwkwisread" class="form-label form-group">是否已读标记接收者是否已查看短信</label>
+
+<select class="form-select form-select-lg mb-3" name="kwkwisread" id="kwkwisread" {% if not mcauthfield_kwkwisread.mcisblank %}required {% endif %} data-name="insert">
+<option value="True" selected >是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_relatedtkwkwaskid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="relatedtkwkwaskid" class="form-label form-group">关联任务ID如果短信发送与某个特定任务相关</label>
+
+<select class="form-select form-select-lg mb-3" name="relatedtkwkwaskid" id="relatedtkwkwaskid" {% if not mcauthfield_relatedtkwkwaskid.mcisblank %}required {% endif %} data-name="insert"> <option value="" selected>未选择</option> {% for record in data_mc_repkwkwortperiods_55389 %} 
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+ {% endfor %}
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="modal-action modal-close btn-primary btn waves-effect waves-light">提交</button>
+                  <button type="reset" class="modal-action modal-close btn-default btn waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_upd %}
+    <div id="modalupdate" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">修改</div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="upd" hidden />{% csrf_token %}<input type="text" name="_id_upd" value="" data-name="update_id" hidden />
+                <div class="">
+           {% if mcauthfield_id.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="id_upd"
+class="form-label form-group">
+唯一标识符(id)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_smscontent.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="smscontent_upd"
+class="form-label form-group">
+短信内容(smscontent)
+</label>
+
+<textarea type="text" class="validate form-control form-control-lg"
+name="smscontent"
+id="smscontent_upd"
+placeholder="短信内容"
+{% if not mcauthfield_smscontent.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_smscontent.mcauthchange %}
+readonly
+{% endif %}
+data-name="update"></textarea>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_receivernumber.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="receivernumber_upd"
+class="form-label form-group">
+接收者号码(receivernumber)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="receivernumber"
+id="receivernumber_upd"
+placeholder="接收者号码"
+{% if not mcauthfield_receivernumber.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_receivernumber.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_sendernumber.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="sendernumber_upd"
+class="form-label form-group">
+发送者号码(sendernumber)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="sendernumber"
+id="sendernumber_upd"
+placeholder="发送者号码"
+{% if not mcauthfield_sendernumber.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_sendernumber.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_sendtime.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="sendtime_upd"
+class="form-label form-group">
+发送时间(sendtime)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_status.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="status_upd"
+class="form-label form-group">
+发送状态如成功、失败、待发送(status)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="status"
+id="status_upd"
+placeholder="发送状态如成功、失败、待发送"
+{% if not mcauthfield_status.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_status.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_rekwkwtrycount.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="rekwkwtrycount_upd"
+class="form-label form-group">
+重试次数(rekwkwtrycount)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="rekwkwtrycount"
+id="rekwkwtrycount_upd"
+placeholder="重试次数"
+{% if not mcauthfield_rekwkwtrycount.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_rekwkwtrycount.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_errkwkwormessage.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="errkwkwormessage_upd"
+class="form-label form-group">
+错误信息如果发送失败(errkwkwormessage)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="errkwkwormessage"
+id="errkwkwormessage_upd"
+placeholder="错误信息如果发送失败"
+{% if not mcauthfield_errkwkwormessage.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_errkwkwormessage.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_kwkwisread.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="kwkwisread_upd"
+class="form-label form-group">
+是否已读标记接收者是否已查看短信(kwkwisread)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="kwkwisread"
+id="kwkwisread_upd"
+{% if not mcauthfield_kwkwisread.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_kwkwisread.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="True" selected>是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_relatedtkwkwaskid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="relatedtkwkwaskid_upd"
+class="form-label form-group">
+关联任务ID如果短信发送与某个特定任务相关(relatedtkwkwaskid)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="relatedtkwkwaskid"
+id="relatedtkwkwaskid_upd"
+{% if not mcauthfield_relatedtkwkwaskid.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_relatedtkwkwaskid.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="">未选择</option>
+{% for record in data_mc_repkwkwortperiods_55389 %}
+
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+
+{% endfor %}
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">提交</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_del %}
+    <div id="modalremove" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">删除</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>确认删除这条记录吗?</p>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="del" hidden />{% csrf_token %}<input type="text" name="_id" value="" data-name="remove" hidden />
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">确认</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_view %}
+    <div id="modalpreview" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <h4>预览</h4>
+          <div class="">
+            
+{% if mcauthfield_id.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">唯一标识符</p>
+
+<p id="id_view">
+{{record.id|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_smscontent.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">短信内容</p>
+
+<p id="smscontent_view">
+{{record.smscontent|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_receivernumber.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">接收者号码</p>
+
+<p id="receivernumber_view">
+{{record.receivernumber|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_sendernumber.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">发送者号码</p>
+
+<p id="sendernumber_view">
+{{record.sendernumber|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_sendtime.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">发送时间</p>
+
+<p id="sendtime_view">
+{{record.sendtime|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_status.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">发送状态如成功、失败、待发送</p>
+
+<p id="status_view">
+{{record.status|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_rekwkwtrycount.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">重试次数</p>
+
+<p id="rekwkwtrycount_view">
+{{record.rekwkwtrycount|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_errkwkwormessage.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">错误信息如果发送失败</p>
+
+<p id="errkwkwormessage_view">
+{{record.errkwkwormessage|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_kwkwisread.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">是否已读标记接收者是否已查看短信</p>
+
+<p id="kwkwisread_view">
+{{record.kwkwisread|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_relatedtkwkwaskid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">关联任务ID如果短信发送与某个特定任务相关</p>
+
+<p id="relatedtkwkwaskid_view">
+{{record.relatedtkwkwaskid|safe }}
+</p>
+
+</div>
+{% endif %}
+<div class="modal-footer">
+              <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block script-footer %}
+<script>
+  function myreset(){
+window.location.href= "/config_busi/smslogs";
+};
+if (document.getElementById("modalupdate")){
+document.getElementById("modalupdate").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/smslogs',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+{% if mcauthfield_id.mcauthview %}
+$("#id_upd").val(resp.ins.id);
+{% endif %}
+
+{% if mcauthfield_smscontent.mcauthview %}
+$("#smscontent_upd").val(resp.ins.smscontent);
+{% endif %}
+
+{% if mcauthfield_receivernumber.mcauthview %}
+$("#receivernumber_upd").val(resp.ins.receivernumber);
+{% endif %}
+
+{% if mcauthfield_sendernumber.mcauthview %}
+$("#sendernumber_upd").val(resp.ins.sendernumber);
+{% endif %}
+
+{% if mcauthfield_sendtime.mcauthview %}
+$("#sendtime_upd").val(resp.ins.sendtime);
+{% endif %}
+
+{% if mcauthfield_status.mcauthview %}
+$("#status_upd").val(resp.ins.status);
+{% endif %}
+
+{% if mcauthfield_rekwkwtrycount.mcauthview %}
+$("#rekwkwtrycount_upd").val(resp.ins.rekwkwtrycount);
+{% endif %}
+
+{% if mcauthfield_errkwkwormessage.mcauthview %}
+$("#errkwkwormessage_upd").val(resp.ins.errkwkwormessage);
+{% endif %}
+
+{% if mcauthfield_kwkwisread.mcauthview %}
+$("#kwkwisread_upd").val(resp.ins.kwkwisread);
+{% endif %}
+
+{% if mcauthfield_relatedtkwkwaskid.mcauthview %}
+$("#relatedtkwkwaskid_upd").val(resp.ins.relatedtkwkwaskid);
+{% endif %}
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+function upd(_id){
+let data = {
+optype:'get',
+_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value,
+
+{% if mcauthfield_id.mcauthchange %}
+id:$("#id_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_smscontent.mcauthchange %}
+smscontent:$("#smscontent_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_receivernumber.mcauthchange %}
+receivernumber:$("#receivernumber_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_sendernumber.mcauthchange %}
+sendernumber:$("#sendernumber_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_sendtime.mcauthchange %}
+sendtime:$("#sendtime_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_status.mcauthchange %}
+status:$("#status_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_rekwkwtrycount.mcauthchange %}
+rekwkwtrycount:$("#rekwkwtrycount_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_errkwkwormessage.mcauthchange %}
+errkwkwormessage:$("#errkwkwormessage_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_kwkwisread.mcauthchange %}
+kwkwisread:$("#kwkwisread_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_relatedtkwkwaskid.mcauthchange %}
+relatedtkwkwaskid:$("#relatedtkwkwaskid_upd]").val(),
+{% endif %}
+
+}
+$.ajax({
+url: '/config_busi/smslogs',
+method: 'post',
+data: data,
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+if (document.getElementById("modalpreview")) {
+document.getElementById("modalpreview").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/smslogs',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+
+
+{% if mcauthfield_id.mcauthview %}
+document.getElementById("id_view").innerHTML=resp.ins.id;
+{% endif %}
+
+
+
+
+{% if mcauthfield_smscontent.mcauthview %}
+document.getElementById("smscontent_view").innerHTML=resp.ins.smscontent;
+{% endif %}
+
+
+
+
+{% if mcauthfield_receivernumber.mcauthview %}
+document.getElementById("receivernumber_view").innerHTML=resp.ins.receivernumber;
+{% endif %}
+
+
+
+
+{% if mcauthfield_sendernumber.mcauthview %}
+document.getElementById("sendernumber_view").innerHTML=resp.ins.sendernumber;
+{% endif %}
+
+
+
+
+{% if mcauthfield_sendtime.mcauthview %}
+document.getElementById("sendtime_view").innerHTML=resp.ins.sendtime;
+{% endif %}
+
+
+
+
+{% if mcauthfield_status.mcauthview %}
+document.getElementById("status_view").innerHTML=resp.ins.status;
+{% endif %}
+
+
+
+
+{% if mcauthfield_rekwkwtrycount.mcauthview %}
+document.getElementById("rekwkwtrycount_view").innerHTML=resp.ins.rekwkwtrycount;
+{% endif %}
+
+
+
+
+{% if mcauthfield_errkwkwormessage.mcauthview %}
+document.getElementById("errkwkwormessage_view").innerHTML=resp.ins.errkwkwormessage;
+{% endif %}
+
+
+
+
+{% if mcauthfield_kwkwisread.mcauthview %}
+document.getElementById("kwkwisread_view").innerHTML=resp.ins.kwkwisread;
+{% endif %}
+
+
+
+
+{% if mcauthfield_relatedtkwkwaskid.mcauthview %}
+document.getElementById("relatedtkwkwaskid_view").innerHTML=resp.ins.relatedtkwkwaskid;
+{% endif %}
+
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+if (document.getElementById("modalremove")) {
+document.getElementById("modalremove").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=remove]").val(_id);
+});
+};
+function del(_id){
+$.ajax({
+url: '/config_busi/smslogs',
+method: 'post',
+data: {optype:'del',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+</script>
+{% endblock %}

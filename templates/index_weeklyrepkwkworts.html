@@ -1,0 +1,428 @@
+{% extends 'tp.html' %}
+
+{% block title %}
+beta_基于django的周报管理系统
+
+{% endblock %}
+{% block header-image %}
+
+{% endblock %}
+
+{% block body %}
+
+<h1 hidden>
+    标注-用于区分表名
+周报表
+</h1>
+
+<div class="container my-container-margin">
+    <div class="row">
+        <div class="col s6">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                周报表
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container my-container-margin">
+    <div class="tab-content" id="myTabContent">
+        
+<div class="tab-pane fade show " id="t-8094-tab-pane" role="tabpanel" aria-labelledby="t-8094-tab" tabindex="0">
+用户表
+<div>
+<a href="/config_busi/users" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8095-tab-pane" role="tabpanel" aria-labelledby="t-8095-tab" tabindex="0">
+角色表
+<div>
+<a href="/config_busi/roles" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8096-tab-pane" role="tabpanel" aria-labelledby="t-8096-tab" tabindex="0">
+用户角色关联表
+<div>
+<a href="/config_busi/userrolerelations" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8097-tab-pane" role="tabpanel" aria-labelledby="t-8097-tab" tabindex="0">
+周报模板表
+<div>
+<a href="/config_busi/weeklyrepkwkworttemplates" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8098-tab-pane" role="tabpanel" aria-labelledby="t-8098-tab" tabindex="0">
+周报表
+<div>
+<a href="/config_busi/weeklyrepkwkworts" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8099-tab-pane" role="tabpanel" aria-labelledby="t-8099-tab" tabindex="0">
+报告周期表
+<div>
+<a href="/config_busi/repkwkwortperiods" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8100-tab-pane" role="tabpanel" aria-labelledby="t-8100-tab" tabindex="0">
+报告状态表
+<div>
+<a href="/config_busi/repkwkwortstatuses" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8101-tab-pane" role="tabpanel" aria-labelledby="t-8101-tab" tabindex="0">
+报告类型表
+<div>
+<a href="/config_busi/repkwkworttypes" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8102-tab-pane" role="tabpanel" aria-labelledby="t-8102-tab" tabindex="0">
+报告审核表
+<div>
+<a href="/config_busi/repkwkwortaudits" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8103-tab-pane" role="tabpanel" aria-labelledby="t-8103-tab" tabindex="0">
+审核意见表
+<div>
+<a href="/config_busi/auditcomments" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8104-tab-pane" role="tabpanel" aria-labelledby="t-8104-tab" tabindex="0">
+部门表
+<div>
+<a href="/config_busi/departments" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8105-tab-pane" role="tabpanel" aria-labelledby="t-8105-tab" tabindex="0">
+员工表
+<div>
+<a href="/config_busi/employees" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8106-tab-pane" role="tabpanel" aria-labelledby="t-8106-tab" tabindex="0">
+员工周报关联表
+<div>
+<a href="/config_busi/employeeweeklyrepkwkwortrelations" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8107-tab-pane" role="tabpanel" aria-labelledby="t-8107-tab" tabindex="0">
+通知表
+<div>
+<a href="/config_busi/notkwkwifications" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8108-tab-pane" role="tabpanel" aria-labelledby="t-8108-tab" tabindex="0">
+通知类型表
+<div>
+<a href="/config_busi/notkwkwificationtypes" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8109-tab-pane" role="tabpanel" aria-labelledby="t-8109-tab" tabindex="0">
+邮件发送记录表
+<div>
+<a href="/config_busi/emaillogs" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8110-tab-pane" role="tabpanel" aria-labelledby="t-8110-tab" tabindex="0">
+短信发送记录表
+<div>
+<a href="/config_busi/smslogs" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8111-tab-pane" role="tabpanel" aria-labelledby="t-8111-tab" tabindex="0">
+附件表
+<div>
+<a href="/config_busi/attachments" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8112-tab-pane" role="tabpanel" aria-labelledby="t-8112-tab" tabindex="0">
+附件类型表
+<div>
+<a href="/config_busi/attachmenttypes" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8113-tab-pane" role="tabpanel" aria-labelledby="t-8113-tab" tabindex="0">
+报告提交历史表
+<div>
+<a href="/config_busi/repkwkwortsubmkwkwissionhkwkwistkwkwories" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8114-tab-pane" role="tabpanel" aria-labelledby="t-8114-tab" tabindex="0">
+报告修改历史表
+<div>
+<a href="/config_busi/repkwkwortmodkwkwificationhkwkwistkwkwories" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8115-tab-pane" role="tabpanel" aria-labelledby="t-8115-tab" tabindex="0">
+报告评论表
+<div>
+<a href="/config_busi/repkwkwortcomments" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8116-tab-pane" role="tabpanel" aria-labelledby="t-8116-tab" tabindex="0">
+评论回复表
+<div>
+<a href="/config_busi/commentreplies" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8117-tab-pane" role="tabpanel" aria-labelledby="t-8117-tab" tabindex="0">
+报告评分表
+<div>
+<a href="/config_busi/repkwkwortratkwkwings" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8118-tab-pane" role="tabpanel" aria-labelledby="t-8118-tab" tabindex="0">
+评分标准表
+<div>
+<a href="/config_busi/ratkwkwingcriteria" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8119-tab-pane" role="tabpanel" aria-labelledby="t-8119-tab" tabindex="0">
+权限表
+<div>
+<a href="/config_busi/permkwkwissions" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8120-tab-pane" role="tabpanel" aria-labelledby="t-8120-tab" tabindex="0">
+权限角色关联表
+<div>
+<a href="/config_busi/permkwkwissionrolerelations" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8121-tab-pane" role="tabpanel" aria-labelledby="t-8121-tab" tabindex="0">
+系统日志表
+<div>
+<a href="/config_busi/systemlogs" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8122-tab-pane" role="tabpanel" aria-labelledby="t-8122-tab" tabindex="0">
+报表配置表
+<div>
+<a href="/config_busi/repkwkwortconfigurations" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8123-tab-pane" role="tabpanel" aria-labelledby="t-8123-tab" tabindex="0">
+报表导出记录表
+<div>
+<a href="/config_busi/repkwkwortexpkwkwortreckwkwords" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8124-tab-pane" role="tabpanel" aria-labelledby="t-8124-tab" tabindex="0">
+报表模板字段表
+<div>
+<a href="/config_busi/repkwkworttemplatefields" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8125-tab-pane" role="tabpanel" aria-labelledby="t-8125-tab" tabindex="0">
+报表字段类型表
+<div>
+<a href="/config_busi/repkwkwortfieldtypes" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8126-tab-pane" role="tabpanel" aria-labelledby="t-8126-tab" tabindex="0">
+报表数据表
+<div>
+<a href="/config_busi/repkwkwortdata" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+<div class="tab-pane fade show " id="t-8127-tab-pane" role="tabpanel" aria-labelledby="t-8127-tab" tabindex="0">
+系统管理员
+<div>
+<a href="/config_busi/supermanager" target="_blank">
+查看数据
+</a>
+</div>
+</div>
+
+
+    </div>
+</div>
+
+
+        {% if mcauthfield_repkwkwortid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortid" class="form-label form-group">报ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_weekstartdate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="weekstartdate" class="form-label form-group">周开始日期</label>
+
+<input type="date" class="form-control form-control-lg" name="weekstartdate" id="weekstartdate" {% if not mcauthfield_weekstartdate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_weekenddate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="weekenddate" class="form-label form-group">周结束日期</label>
+
+<input type="date" class="form-control form-control-lg" name="weekenddate" id="weekenddate" {% if not mcauthfield_weekenddate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_department.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="department" class="form-label form-group">部门</label>
+
+<input type="text" class="form-control form-control-lg" name="department" id="department"{% if not mcauthfield_department.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_employeename.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="employeename" class="form-label form-group">员工姓名</label>
+
+<input type="text" class="form-control form-control-lg" name="employeename" id="employeename"{% if not mcauthfield_employeename.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_repkwkwortcontent.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortcontent" class="form-label form-group">报告内容</label>
+
+<textarea class="form-control form-control-lg" name="repkwkwortcontent" id="repkwkwortcontent" {% if not mcauthfield_repkwkwortcontent.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_status.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="status" class="form-label form-group">状态</label>
+
+<input type="text" class="form-control form-control-lg" name="status" id="status"{% if not mcauthfield_status.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_createdat.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="createdat" class="form-label form-group">创建时间</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_updatedat.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="updatedat" class="form-label form-group">更新时间</label>
+
+</div>
+        {% endif %}
+
+{% endblock %}
+
+{% block footer %}
+
+CopyRight ©beta_基于django的周报管理系统 vm779_2f88e95faa233d77
+
+{% endblock %}
+
+{% block script-footer %}
+
+{% endblock %}
+

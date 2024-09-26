@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 部门表(departments)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentname_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** pie_v2***/ init_echart("echart_departments_departmentname_pie_v2",'departments.departmentname_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentname_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** pie_v1***/ init_echart("echart_departments_departmentname_pie_v1",'departments.departmentname_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentname_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** pie***/ init_echart("echart_departments_departmentname_pie",'departments.departmentname_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_departmentname_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** line***/ init_echart("echart_departments_departmentname_line",'departments.departmentname_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_departmentname_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** bar***/ init_echart("echart_departments_departmentname_bar",'departments.departmentname_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_departmentname_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门名称 ******************** bar_v1***/ init_echart("echart_departments_departmentname_bar_v1",'departments.departmentname_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentcode_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** pie_v2***/ init_echart("echart_departments_departmentcode_pie_v2",'departments.departmentcode_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentcode_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** pie_v1***/ init_echart("echart_departments_departmentcode_pie_v1",'departments.departmentcode_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_departmentcode_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** pie***/ init_echart("echart_departments_departmentcode_pie",'departments.departmentcode_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_departmentcode_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** line***/ init_echart("echart_departments_departmentcode_line",'departments.departmentcode_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_departmentcode_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** bar***/ init_echart("echart_departments_departmentcode_bar",'departments.departmentcode_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_departmentcode_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门编码 ******************** bar_v1***/ init_echart("echart_departments_departmentcode_bar_v1",'departments.departmentcode_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_description_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** pie_v2***/ init_echart("echart_departments_description_pie_v2",'departments.description_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_description_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** pie_v1***/ init_echart("echart_departments_description_pie_v1",'departments.description_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_description_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** pie***/ init_echart("echart_departments_description_pie",'departments.description_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_description_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** line***/ init_echart("echart_departments_description_line",'departments.description_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_description_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** bar***/ init_echart("echart_departments_description_bar",'departments.description_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_description_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 部门描述 ******************** bar_v1***/ init_echart("echart_departments_description_bar_v1",'departments.description_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** pie_v2***/ init_echart("echart_departments_createdate_pie_v2",'departments.createdate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** pie_v1***/ init_echart("echart_departments_createdate_pie_v1",'departments.createdate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdate_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** pie***/ init_echart("echart_departments_createdate_pie",'departments.createdate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_createdate_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** line***/ init_echart("echart_departments_createdate_line",'departments.createdate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_createdate_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** bar***/ init_echart("echart_departments_createdate_bar",'departments.createdate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_createdate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建日期 ******************** bar_v1***/ init_echart("echart_departments_createdate_bar_v1",'departments.createdate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** pie_v2***/ init_echart("echart_departments_createdby_pie_v2",'departments.createdby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** pie_v1***/ init_echart("echart_departments_createdby_pie_v1",'departments.createdby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_createdby_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** pie***/ init_echart("echart_departments_createdby_pie",'departments.createdby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_createdby_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** line***/ init_echart("echart_departments_createdby_line",'departments.createdby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_createdby_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** bar***/ init_echart("echart_departments_createdby_bar",'departments.createdby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_createdby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 创建人 ******************** bar_v1***/ init_echart("echart_departments_createdby_bar_v1",'departments.createdby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** pie_v2***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_pie_v2",'departments.lkwkwastmodkwkwifieddate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** pie_v1***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_pie_v1",'departments.lkwkwastmodkwkwifieddate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** pie***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_pie",'departments.lkwkwastmodkwkwifieddate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** line***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_line",'departments.lkwkwastmodkwkwifieddate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** bar***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_bar",'departments.lkwkwastmodkwkwifieddate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifieddate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改日期 ******************** bar_v1***/ init_echart("echart_departments_lkwkwastmodkwkwifieddate_bar_v1",'departments.lkwkwastmodkwkwifieddate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** pie_v2***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_pie_v2",'departments.lkwkwastmodkwkwifiedby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** pie_v1***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_pie_v1",'departments.lkwkwastmodkwkwifiedby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_pie" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** pie***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_pie",'departments.lkwkwastmodkwkwifiedby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_line" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** line***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_line",'departments.lkwkwastmodkwkwifiedby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_bar" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** bar***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_bar",'departments.lkwkwastmodkwkwifiedby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_departments_lkwkwastmodkwkwifiedby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 部门表 最后修改人 ******************** bar_v1***/ init_echart("echart_departments_lkwkwastmodkwkwifiedby_bar_v1",'departments.lkwkwastmodkwkwifiedby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

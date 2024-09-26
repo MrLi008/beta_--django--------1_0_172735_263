@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 报表字段类型表(repkwkwortfieldtypes)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_fieldname_pie_v2",'repkwkwortfieldtypes.fieldname_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_fieldname_pie_v1",'repkwkwortfieldtypes.fieldname_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_fieldname_pie",'repkwkwortfieldtypes.fieldname_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_fieldname_line",'repkwkwortfieldtypes.fieldname_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_fieldname_bar",'repkwkwortfieldtypes.fieldname_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldname_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段名称 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_fieldname_bar_v1",'repkwkwortfieldtypes.fieldname_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_pie_v2",'repkwkwortfieldtypes.fieldtype_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_pie_v1",'repkwkwortfieldtypes.fieldtype_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_pie",'repkwkwortfieldtypes.fieldtype_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** line***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_line",'repkwkwortfieldtypes.fieldtype_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_bar",'repkwkwortfieldtypes.fieldtype_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_fieldtype_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段类型如VARCHAR ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_fieldtype_bar_v1",'repkwkwortfieldtypes.fieldtype_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_maxlength_pie_v2",'repkwkwortfieldtypes.maxlength_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_maxlength_pie_v1",'repkwkwortfieldtypes.maxlength_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_maxlength_pie",'repkwkwortfieldtypes.maxlength_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_maxlength_line",'repkwkwortfieldtypes.maxlength_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_maxlength_bar",'repkwkwortfieldtypes.maxlength_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_maxlength_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 最大长度针对类型 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_maxlength_bar_v1",'repkwkwortfieldtypes.maxlength_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie_v2",'repkwkwortfieldtypes.kwkwdefaultvalue_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie_v1",'repkwkwortfieldtypes.kwkwdefaultvalue_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_pie",'repkwkwortfieldtypes.kwkwdefaultvalue_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_line",'repkwkwortfieldtypes.kwkwdefaultvalue_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_bar",'repkwkwortfieldtypes.kwkwdefaultvalue_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_kwkwdefaultvalue_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 默认值 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_kwkwdefaultvalue_bar_v1",'repkwkwortfieldtypes.kwkwdefaultvalue_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_description_pie_v2",'repkwkwortfieldtypes.description_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_description_pie_v1",'repkwkwortfieldtypes.description_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_description_pie",'repkwkwortfieldtypes.description_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_description_line",'repkwkwortfieldtypes.description_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_description_bar",'repkwkwortfieldtypes.description_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_description_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 字段描述 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_description_bar_v1",'repkwkwortfieldtypes.description_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_createdat_pie_v2",'repkwkwortfieldtypes.createdat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_createdat_pie_v1",'repkwkwortfieldtypes.createdat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_createdat_pie",'repkwkwortfieldtypes.createdat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_createdat_line",'repkwkwortfieldtypes.createdat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_createdat_bar",'repkwkwortfieldtypes.createdat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_createdat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 创建时间 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_createdat_bar_v1",'repkwkwortfieldtypes.createdat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** pie_v2***/ init_echart("echart_repkwkwortfieldtypes_updatedat_pie_v2",'repkwkwortfieldtypes.updatedat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** pie_v1***/ init_echart("echart_repkwkwortfieldtypes_updatedat_pie_v1",'repkwkwortfieldtypes.updatedat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** pie***/ init_echart("echart_repkwkwortfieldtypes_updatedat_pie",'repkwkwortfieldtypes.updatedat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_line" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** line***/ init_echart("echart_repkwkwortfieldtypes_updatedat_line",'repkwkwortfieldtypes.updatedat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** bar***/ init_echart("echart_repkwkwortfieldtypes_updatedat_bar",'repkwkwortfieldtypes.updatedat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortfieldtypes_updatedat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表字段类型表 更新时间 ******************** bar_v1***/ init_echart("echart_repkwkwortfieldtypes_updatedat_bar_v1",'repkwkwortfieldtypes.updatedat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

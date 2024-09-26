@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 报表模板字段表(repkwkworttemplatefields)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_fieldname_pie_v2",'repkwkworttemplatefields.fieldname_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_fieldname_pie_v1",'repkwkworttemplatefields.fieldname_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_fieldname_pie",'repkwkworttemplatefields.fieldname_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** line***/ init_echart("echart_repkwkworttemplatefields_fieldname_line",'repkwkworttemplatefields.fieldname_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_fieldname_bar",'repkwkworttemplatefields.fieldname_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldname_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段名称 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_fieldname_bar_v1",'repkwkworttemplatefields.fieldname_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_fieldtype_pie_v2",'repkwkworttemplatefields.fieldtype_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_fieldtype_pie_v1",'repkwkworttemplatefields.fieldtype_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_fieldtype_pie",'repkwkworttemplatefields.fieldtype_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** line***/ init_echart("echart_repkwkworttemplatefields_fieldtype_line",'repkwkworttemplatefields.fieldtype_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_fieldtype_bar",'repkwkworttemplatefields.fieldtype_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_fieldtype_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 字段类型 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_fieldtype_bar_v1",'repkwkworttemplatefields.fieldtype_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_pie_v2",'repkwkworttemplatefields.kwkwdefaultvalue_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_pie_v1",'repkwkworttemplatefields.kwkwdefaultvalue_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_pie",'repkwkworttemplatefields.kwkwdefaultvalue_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** line***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_line",'repkwkworttemplatefields.kwkwdefaultvalue_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_bar",'repkwkworttemplatefields.kwkwdefaultvalue_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_kwkwdefaultvalue_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 默认值 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_kwkwdefaultvalue_bar_v1",'repkwkworttemplatefields.kwkwdefaultvalue_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_description_pie_v2",'repkwkworttemplatefields.description_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_description_pie_v1",'repkwkworttemplatefields.description_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_description_pie",'repkwkworttemplatefields.description_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** line***/ init_echart("echart_repkwkworttemplatefields_description_line",'repkwkworttemplatefields.description_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_description_bar",'repkwkworttemplatefields.description_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_description_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 描述 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_description_bar_v1",'repkwkworttemplatefields.description_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_pie_v2",'repkwkworttemplatefields.skwkwortorder_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_pie_v1",'repkwkworttemplatefields.skwkwortorder_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_pie",'repkwkworttemplatefields.skwkwortorder_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** line***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_line",'repkwkworttemplatefields.skwkwortorder_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_bar",'repkwkworttemplatefields.skwkwortorder_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_skwkwortorder_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 排序顺序 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_skwkwortorder_bar_v1",'repkwkworttemplatefields.skwkwortorder_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_createdby_pie_v2",'repkwkworttemplatefields.createdby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_createdby_pie_v1",'repkwkworttemplatefields.createdby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_createdby_pie",'repkwkworttemplatefields.createdby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** line***/ init_echart("echart_repkwkworttemplatefields_createdby_line",'repkwkworttemplatefields.createdby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_createdby_bar",'repkwkworttemplatefields.createdby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建人 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_createdby_bar_v1",'repkwkworttemplatefields.createdby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_createdat_pie_v2",'repkwkworttemplatefields.createdat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_createdat_pie_v1",'repkwkworttemplatefields.createdat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_createdat_pie",'repkwkworttemplatefields.createdat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** line***/ init_echart("echart_repkwkworttemplatefields_createdat_line",'repkwkworttemplatefields.createdat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_createdat_bar",'repkwkworttemplatefields.createdat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_createdat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 创建时间 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_createdat_bar_v1",'repkwkworttemplatefields.createdat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_updatedby_pie_v2",'repkwkworttemplatefields.updatedby_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_updatedby_pie_v1",'repkwkworttemplatefields.updatedby_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_updatedby_pie",'repkwkworttemplatefields.updatedby_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** line***/ init_echart("echart_repkwkworttemplatefields_updatedby_line",'repkwkworttemplatefields.updatedby_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_updatedby_bar",'repkwkworttemplatefields.updatedby_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedby_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新人 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_updatedby_bar_v1",'repkwkworttemplatefields.updatedby_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** pie_v2***/ init_echart("echart_repkwkworttemplatefields_updatedat_pie_v2",'repkwkworttemplatefields.updatedat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** pie_v1***/ init_echart("echart_repkwkworttemplatefields_updatedat_pie_v1",'repkwkworttemplatefields.updatedat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** pie***/ init_echart("echart_repkwkworttemplatefields_updatedat_pie",'repkwkworttemplatefields.updatedat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_line" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** line***/ init_echart("echart_repkwkworttemplatefields_updatedat_line",'repkwkworttemplatefields.updatedat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** bar***/ init_echart("echart_repkwkworttemplatefields_updatedat_bar",'repkwkworttemplatefields.updatedat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkworttemplatefields_updatedat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表模板字段表 更新时间 ******************** bar_v1***/ init_echart("echart_repkwkworttemplatefields_updatedat_bar_v1",'repkwkworttemplatefields.updatedat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

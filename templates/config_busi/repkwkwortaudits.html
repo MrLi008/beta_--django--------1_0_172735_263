@@ -1,0 +1,971 @@
+{% extends '../tp.html' %}
+
+{% block title %}
+报告审核表
+{% endblock %}
+
+{% block body %}
+  <div class="my-container-margin">
+    <div class="divider"></div>
+    {% csrf_token %}
+    <div class="section">
+      <h4>报告审核表</h4>
+      <div>
+        <div class="row">
+          
+          {% if has_add %}
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalinsert" class="waves-effect waves-light btn">添加</button>
+          {% endif %}
+          <div class="divider"></div>
+        
+        
+          
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<a href="/config_visual/bi_tprepkwkwortaudits" target="_blank" class="waves-effect waves-light btn">
+统计分析
+</a>
+</div>
+        </div>  
+        <div class="section">
+          {% if record %}
+            <h3>Empty Data</h3>
+          {% else %}
+          
+<div class="row">
+<form action="" method="get">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-2">
+<button type="submit" class="btn btn-primary" >
+<i class="fas fa-search">搜索</i>
+</button>
+<a type="reset" class="btn btn-default" href="/config_busi/repkwkwortaudits">
+<i class="fas fa-eraser">重置</i>
+</a>
+</div>
+</form>
+
+          </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  
+{% if mcauthfield_repkwkwortauditid.mcauthview %}
+<td>
+报告审核ID
+</td>
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+<td>
+报告ID
+</td>
+{% endif %}
+
+{% if mcauthfield_auditkwkworid.mcauthview %}
+<td>
+审核人ID
+</td>
+{% endif %}
+
+{% if mcauthfield_auditdate.mcauthview %}
+<td>
+审核日期
+</td>
+{% endif %}
+
+{% if mcauthfield_auditstatus.mcauthview %}
+<td>
+审核状态
+</td>
+{% endif %}
+
+{% if mcauthfield_auditcomment.mcauthview %}
+<td>
+审核意见
+</td>
+{% endif %}
+
+{% if mcauthfield_approvaldate.mcauthview %}
+<td>
+批准日期
+</td>
+{% endif %}
+
+{% if mcauthfield_approvalby.mcauthview %}
+<td>
+批准人
+</td>
+{% endif %}
+
+{% if mcauthfield_isapproved.mcauthview %}
+<td>
+是否已批准
+</td>
+{% endif %}
+
+{% if mcauthfield_rejectionrekwkwason.mcauthview %}
+<td>
+拒绝理由
+</td>
+{% endif %}
+<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    
+ {% if mcauthfield_repkwkwortauditid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkwortauditid}}">
+{{record.repkwkwortauditid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_repkwkwortid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkwortid}}">
+{{record.repkwkwortid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_auditkwkworid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.auditkwkworid}}">
+{{record.auditkwkworid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_auditdate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.auditdate}}">
+{{record.auditdate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_auditstatus.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.auditstatus}}">
+{{record.auditstatus}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_auditcomment.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.auditcomment}}">
+{{record.auditcomment}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_approvaldate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.approvaldate}}">
+{{record.approvaldate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_approvalby.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.approvalby}}">
+{{record.approvalby}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_isapproved.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.isapproved}}">
+{{record.isapproved}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_rejectionrekwkwason.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.rejectionrekwkwason}}">
+{{record.rejectionrekwkwason}}
+</p>
+
+</td>
+{% endif %}
+ <td>
+                      {% if has_upd %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalupdate">修改</button>
+                      {% endif %}
+                      {% if has_del %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalremove">删除</button>
+                      {% endif %}
+                      {% if has_view %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalpreview">查看</button>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  <!-- Modal Structure -->
+
+  {% if has_add %}
+    <div id="modalinsert" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h4>添加</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="add" hidden />{% csrf_token %}<div class="">
+        {% if mcauthfield_repkwkwortauditid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortauditid" class="form-label form-group">报告审核ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_repkwkwortid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortid" class="form-label form-group">报告ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_auditkwkworid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="auditkwkworid" class="form-label form-group">审核人ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_auditdate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="auditdate" class="form-label form-group">审核日期</label>
+
+<input type="date" class="form-control form-control-lg" name="auditdate" id="auditdate" {% if not mcauthfield_auditdate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_auditstatus.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="auditstatus" class="form-label form-group">审核状态</label>
+
+<input type="text" class="form-control form-control-lg" name="auditstatus" id="auditstatus"{% if not mcauthfield_auditstatus.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_auditcomment.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="auditcomment" class="form-label form-group">审核意见</label>
+
+<input type="text" class="form-control form-control-lg" name="auditcomment" id="auditcomment"{% if not mcauthfield_auditcomment.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_approvaldate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="approvaldate" class="form-label form-group">批准日期</label>
+
+<input type="date" class="form-control form-control-lg" name="approvaldate" id="approvaldate" {% if not mcauthfield_approvaldate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_approvalby.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="approvalby" class="form-label form-group">批准人</label>
+
+<input type="text" class="form-control form-control-lg" name="approvalby" id="approvalby"{% if not mcauthfield_approvalby.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_isapproved.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="isapproved" class="form-label form-group">是否已批准</label>
+
+<select class="form-select form-select-lg mb-3" name="isapproved" id="isapproved" {% if not mcauthfield_isapproved.mcisblank %}required {% endif %} data-name="insert">
+<option value="True" selected >是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_rejectionrekwkwason.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="rejectionrekwkwason" class="form-label form-group">拒绝理由</label>
+
+<input type="text" class="form-control form-control-lg" name="rejectionrekwkwason" id="rejectionrekwkwason"{% if not mcauthfield_rejectionrekwkwason.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="modal-action modal-close btn-primary btn waves-effect waves-light">提交</button>
+                  <button type="reset" class="modal-action modal-close btn-default btn waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_upd %}
+    <div id="modalupdate" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">修改</div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="upd" hidden />{% csrf_token %}<input type="text" name="_id_upd" value="" data-name="update_id" hidden />
+                <div class="">
+           {% if mcauthfield_repkwkwortauditid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkwortauditid_upd"
+class="form-label form-group">
+报告审核ID(repkwkwortauditid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_repkwkwortid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkwortid_upd"
+class="form-label form-group">
+报告ID(repkwkwortid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_auditkwkworid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="auditkwkworid_upd"
+class="form-label form-group">
+审核人ID(auditkwkworid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_auditdate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="auditdate_upd"
+class="form-label form-group">
+审核日期(auditdate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="auditdate"
+id="auditdate_upd"
+placeholder="审核日期"
+{% if not mcauthfield_auditdate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_auditdate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_auditstatus.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="auditstatus_upd"
+class="form-label form-group">
+审核状态(auditstatus)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="auditstatus"
+id="auditstatus_upd"
+placeholder="审核状态"
+{% if not mcauthfield_auditstatus.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_auditstatus.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_auditcomment.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="auditcomment_upd"
+class="form-label form-group">
+审核意见(auditcomment)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="auditcomment"
+id="auditcomment_upd"
+placeholder="审核意见"
+{% if not mcauthfield_auditcomment.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_auditcomment.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_approvaldate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="approvaldate_upd"
+class="form-label form-group">
+批准日期(approvaldate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="approvaldate"
+id="approvaldate_upd"
+placeholder="批准日期"
+{% if not mcauthfield_approvaldate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_approvaldate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_approvalby.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="approvalby_upd"
+class="form-label form-group">
+批准人(approvalby)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="approvalby"
+id="approvalby_upd"
+placeholder="批准人"
+{% if not mcauthfield_approvalby.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_approvalby.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_isapproved.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="isapproved_upd"
+class="form-label form-group">
+是否已批准(isapproved)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="isapproved"
+id="isapproved_upd"
+{% if not mcauthfield_isapproved.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_isapproved.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="True" selected>是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_rejectionrekwkwason.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="rejectionrekwkwason_upd"
+class="form-label form-group">
+拒绝理由(rejectionrekwkwason)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="rejectionrekwkwason"
+id="rejectionrekwkwason_upd"
+placeholder="拒绝理由"
+{% if not mcauthfield_rejectionrekwkwason.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_rejectionrekwkwason.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">提交</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_del %}
+    <div id="modalremove" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">删除</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>确认删除这条记录吗?</p>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="del" hidden />{% csrf_token %}<input type="text" name="_id" value="" data-name="remove" hidden />
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">确认</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_view %}
+    <div id="modalpreview" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <h4>预览</h4>
+          <div class="">
+            
+{% if mcauthfield_repkwkwortauditid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">报告审核ID</p>
+
+<p id="repkwkwortauditid_view">
+{{record.repkwkwortauditid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">报告ID</p>
+
+<p id="repkwkwortid_view">
+{{record.repkwkwortid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_auditkwkworid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">审核人ID</p>
+
+<p id="auditkwkworid_view">
+{{record.auditkwkworid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_auditdate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">审核日期</p>
+
+<p id="auditdate_view">
+{{record.auditdate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_auditstatus.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">审核状态</p>
+
+<p id="auditstatus_view">
+{{record.auditstatus|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_auditcomment.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">审核意见</p>
+
+<p id="auditcomment_view">
+{{record.auditcomment|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_approvaldate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">批准日期</p>
+
+<p id="approvaldate_view">
+{{record.approvaldate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_approvalby.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">批准人</p>
+
+<p id="approvalby_view">
+{{record.approvalby|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_isapproved.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">是否已批准</p>
+
+<p id="isapproved_view">
+{{record.isapproved|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_rejectionrekwkwason.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">拒绝理由</p>
+
+<p id="rejectionrekwkwason_view">
+{{record.rejectionrekwkwason|safe }}
+</p>
+
+</div>
+{% endif %}
+<div class="modal-footer">
+              <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block script-footer %}
+<script>
+  function myreset(){
+window.location.href= "/config_busi/repkwkwortaudits";
+};
+if (document.getElementById("modalupdate")){
+document.getElementById("modalupdate").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortaudits',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+{% if mcauthfield_repkwkwortauditid.mcauthview %}
+$("#repkwkwortauditid_upd").val(resp.ins.repkwkwortauditid);
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+$("#repkwkwortid_upd").val(resp.ins.repkwkwortid);
+{% endif %}
+
+{% if mcauthfield_auditkwkworid.mcauthview %}
+$("#auditkwkworid_upd").val(resp.ins.auditkwkworid);
+{% endif %}
+
+{% if mcauthfield_auditdate.mcauthview %}
+$("#auditdate_upd").val(resp.ins.auditdate);
+{% endif %}
+
+{% if mcauthfield_auditstatus.mcauthview %}
+$("#auditstatus_upd").val(resp.ins.auditstatus);
+{% endif %}
+
+{% if mcauthfield_auditcomment.mcauthview %}
+$("#auditcomment_upd").val(resp.ins.auditcomment);
+{% endif %}
+
+{% if mcauthfield_approvaldate.mcauthview %}
+$("#approvaldate_upd").val(resp.ins.approvaldate);
+{% endif %}
+
+{% if mcauthfield_approvalby.mcauthview %}
+$("#approvalby_upd").val(resp.ins.approvalby);
+{% endif %}
+
+{% if mcauthfield_isapproved.mcauthview %}
+$("#isapproved_upd").val(resp.ins.isapproved);
+{% endif %}
+
+{% if mcauthfield_rejectionrekwkwason.mcauthview %}
+$("#rejectionrekwkwason_upd").val(resp.ins.rejectionrekwkwason);
+{% endif %}
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+function upd(_id){
+let data = {
+optype:'get',
+_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value,
+
+{% if mcauthfield_repkwkwortauditid.mcauthchange %}
+repkwkwortauditid:$("#repkwkwortauditid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_repkwkwortid.mcauthchange %}
+repkwkwortid:$("#repkwkwortid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_auditkwkworid.mcauthchange %}
+auditkwkworid:$("#auditkwkworid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_auditdate.mcauthchange %}
+auditdate:$("#auditdate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_auditstatus.mcauthchange %}
+auditstatus:$("#auditstatus_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_auditcomment.mcauthchange %}
+auditcomment:$("#auditcomment_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_approvaldate.mcauthchange %}
+approvaldate:$("#approvaldate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_approvalby.mcauthchange %}
+approvalby:$("#approvalby_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_isapproved.mcauthchange %}
+isapproved:$("#isapproved_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_rejectionrekwkwason.mcauthchange %}
+rejectionrekwkwason:$("#rejectionrekwkwason_upd]").val(),
+{% endif %}
+
+}
+$.ajax({
+url: '/config_busi/repkwkwortaudits',
+method: 'post',
+data: data,
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+if (document.getElementById("modalpreview")) {
+document.getElementById("modalpreview").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortaudits',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+
+
+{% if mcauthfield_repkwkwortauditid.mcauthview %}
+document.getElementById("repkwkwortauditid_view").innerHTML=resp.ins.repkwkwortauditid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_repkwkwortid.mcauthview %}
+document.getElementById("repkwkwortid_view").innerHTML=resp.ins.repkwkwortid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_auditkwkworid.mcauthview %}
+document.getElementById("auditkwkworid_view").innerHTML=resp.ins.auditkwkworid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_auditdate.mcauthview %}
+document.getElementById("auditdate_view").innerHTML=resp.ins.auditdate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_auditstatus.mcauthview %}
+document.getElementById("auditstatus_view").innerHTML=resp.ins.auditstatus;
+{% endif %}
+
+
+
+
+{% if mcauthfield_auditcomment.mcauthview %}
+document.getElementById("auditcomment_view").innerHTML=resp.ins.auditcomment;
+{% endif %}
+
+
+
+
+{% if mcauthfield_approvaldate.mcauthview %}
+document.getElementById("approvaldate_view").innerHTML=resp.ins.approvaldate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_approvalby.mcauthview %}
+document.getElementById("approvalby_view").innerHTML=resp.ins.approvalby;
+{% endif %}
+
+
+
+
+{% if mcauthfield_isapproved.mcauthview %}
+document.getElementById("isapproved_view").innerHTML=resp.ins.isapproved;
+{% endif %}
+
+
+
+
+{% if mcauthfield_rejectionrekwkwason.mcauthview %}
+document.getElementById("rejectionrekwkwason_view").innerHTML=resp.ins.rejectionrekwkwason;
+{% endif %}
+
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+if (document.getElementById("modalremove")) {
+document.getElementById("modalremove").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=remove]").val(_id);
+});
+};
+function del(_id){
+$.ajax({
+url: '/config_busi/repkwkwortaudits',
+method: 'post',
+data: {optype:'del',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+</script>
+{% endblock %}

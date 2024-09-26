@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 短信发送记录表(smslogs)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_smscontent_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** pie_v2***/ init_echart("echart_smslogs_smscontent_pie_v2",'smslogs.smscontent_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_smscontent_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** pie_v1***/ init_echart("echart_smslogs_smscontent_pie_v1",'smslogs.smscontent_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_smscontent_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** pie***/ init_echart("echart_smslogs_smscontent_pie",'smslogs.smscontent_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_smscontent_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** line***/ init_echart("echart_smslogs_smscontent_line",'smslogs.smscontent_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_smscontent_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** bar***/ init_echart("echart_smslogs_smscontent_bar",'smslogs.smscontent_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_smscontent_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 短信内容 ******************** bar_v1***/ init_echart("echart_smslogs_smscontent_bar_v1",'smslogs.smscontent_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** pie_v2***/ init_echart("echart_smslogs_receivernumber_pie_v2",'smslogs.receivernumber_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** pie_v1***/ init_echart("echart_smslogs_receivernumber_pie_v1",'smslogs.receivernumber_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** pie***/ init_echart("echart_smslogs_receivernumber_pie",'smslogs.receivernumber_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** line***/ init_echart("echart_smslogs_receivernumber_line",'smslogs.receivernumber_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** bar***/ init_echart("echart_smslogs_receivernumber_bar",'smslogs.receivernumber_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_receivernumber_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 接收者号码 ******************** bar_v1***/ init_echart("echart_smslogs_receivernumber_bar_v1",'smslogs.receivernumber_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** pie_v2***/ init_echart("echart_smslogs_sendernumber_pie_v2",'smslogs.sendernumber_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** pie_v1***/ init_echart("echart_smslogs_sendernumber_pie_v1",'smslogs.sendernumber_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** pie***/ init_echart("echart_smslogs_sendernumber_pie",'smslogs.sendernumber_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** line***/ init_echart("echart_smslogs_sendernumber_line",'smslogs.sendernumber_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** bar***/ init_echart("echart_smslogs_sendernumber_bar",'smslogs.sendernumber_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_sendernumber_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送者号码 ******************** bar_v1***/ init_echart("echart_smslogs_sendernumber_bar_v1",'smslogs.sendernumber_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendtime_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** pie_v2***/ init_echart("echart_smslogs_sendtime_pie_v2",'smslogs.sendtime_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendtime_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** pie_v1***/ init_echart("echart_smslogs_sendtime_pie_v1",'smslogs.sendtime_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_sendtime_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** pie***/ init_echart("echart_smslogs_sendtime_pie",'smslogs.sendtime_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_sendtime_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** line***/ init_echart("echart_smslogs_sendtime_line",'smslogs.sendtime_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_sendtime_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** bar***/ init_echart("echart_smslogs_sendtime_bar",'smslogs.sendtime_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_sendtime_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送时间 ******************** bar_v1***/ init_echart("echart_smslogs_sendtime_bar_v1",'smslogs.sendtime_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_status_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** pie_v2***/ init_echart("echart_smslogs_status_pie_v2",'smslogs.status_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_status_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** pie_v1***/ init_echart("echart_smslogs_status_pie_v1",'smslogs.status_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_status_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** pie***/ init_echart("echart_smslogs_status_pie",'smslogs.status_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_status_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** line***/ init_echart("echart_smslogs_status_line",'smslogs.status_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_status_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** bar***/ init_echart("echart_smslogs_status_bar",'smslogs.status_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_status_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 发送状态如成功、失败、待发送 ******************** bar_v1***/ init_echart("echart_smslogs_status_bar_v1",'smslogs.status_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** pie_v2***/ init_echart("echart_smslogs_rekwkwtrycount_pie_v2",'smslogs.rekwkwtrycount_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** pie_v1***/ init_echart("echart_smslogs_rekwkwtrycount_pie_v1",'smslogs.rekwkwtrycount_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** pie***/ init_echart("echart_smslogs_rekwkwtrycount_pie",'smslogs.rekwkwtrycount_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** line***/ init_echart("echart_smslogs_rekwkwtrycount_line",'smslogs.rekwkwtrycount_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** bar***/ init_echart("echart_smslogs_rekwkwtrycount_bar",'smslogs.rekwkwtrycount_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_rekwkwtrycount_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 重试次数 ******************** bar_v1***/ init_echart("echart_smslogs_rekwkwtrycount_bar_v1",'smslogs.rekwkwtrycount_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** pie_v2***/ init_echart("echart_smslogs_errkwkwormessage_pie_v2",'smslogs.errkwkwormessage_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** pie_v1***/ init_echart("echart_smslogs_errkwkwormessage_pie_v1",'smslogs.errkwkwormessage_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_pie" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** pie***/ init_echart("echart_smslogs_errkwkwormessage_pie",'smslogs.errkwkwormessage_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_line" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** line***/ init_echart("echart_smslogs_errkwkwormessage_line",'smslogs.errkwkwormessage_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_bar" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** bar***/ init_echart("echart_smslogs_errkwkwormessage_bar",'smslogs.errkwkwormessage_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_smslogs_errkwkwormessage_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 短信发送记录表 错误信息如果发送失败 ******************** bar_v1***/ init_echart("echart_smslogs_errkwkwormessage_bar_v1",'smslogs.errkwkwormessage_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 报告评分表(repkwkwortratkwkwings)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** pie_v2***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_pie_v2",'repkwkwortratkwkwings.ratkwkwing_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** pie_v1***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_pie_v1",'repkwkwortratkwkwings.ratkwkwing_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_pie" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** pie***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_pie",'repkwkwortratkwkwings.ratkwkwing_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_line" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** line***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_line",'repkwkwortratkwkwings.ratkwkwing_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_bar" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** bar***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_bar",'repkwkwortratkwkwings.ratkwkwing_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwing_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分示对报告的评分可以是数值类型 ******************** bar_v1***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwing_bar_v1",'repkwkwortratkwkwings.ratkwkwing_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** pie_v2***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_pie_v2",'repkwkwortratkwkwings.repkwkwortdate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** pie_v1***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_pie_v1",'repkwkwortratkwkwings.repkwkwortdate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_pie" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** pie***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_pie",'repkwkwortratkwkwings.repkwkwortdate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_line" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** line***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_line",'repkwkwortratkwkwings.repkwkwortdate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_bar" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** bar***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_bar",'repkwkwortratkwkwings.repkwkwortdate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_repkwkwortdate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 报告日期报告提交的日期 ******************** bar_v1***/ init_echart("echart_repkwkwortratkwkwings_repkwkwortdate_bar_v1",'repkwkwortratkwkwings.repkwkwortdate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** pie_v2***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_pie_v2",'repkwkwortratkwkwings.ratkwkwingdate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** pie_v1***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_pie_v1",'repkwkwortratkwkwings.ratkwkwingdate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_pie" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** pie***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_pie",'repkwkwortratkwkwings.ratkwkwingdate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_line" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** line***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_line",'repkwkwortratkwkwings.ratkwkwingdate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_bar" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** bar***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_bar",'repkwkwortratkwkwings.ratkwkwingdate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_ratkwkwingdate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评分日期对报告进行评分的日期 ******************** bar_v1***/ init_echart("echart_repkwkwortratkwkwings_ratkwkwingdate_bar_v1",'repkwkwortratkwkwings.ratkwkwingdate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** pie_v2***/ init_echart("echart_repkwkwortratkwkwings_comment_pie_v2",'repkwkwortratkwkwings.comment_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** pie_v1***/ init_echart("echart_repkwkwortratkwkwings_comment_pie_v1",'repkwkwortratkwkwings.comment_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_pie" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** pie***/ init_echart("echart_repkwkwortratkwkwings_comment_pie",'repkwkwortratkwkwings.comment_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_line" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** line***/ init_echart("echart_repkwkwortratkwkwings_comment_line",'repkwkwortratkwkwings.comment_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_bar" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** bar***/ init_echart("echart_repkwkwortratkwkwings_comment_bar",'repkwkwortratkwkwings.comment_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortratkwkwings_comment_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报告评分表 评语对报告的额外评语或反馈 ******************** bar_v1***/ init_echart("echart_repkwkwortratkwkwings_comment_bar_v1",'repkwkwortratkwkwings.comment_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

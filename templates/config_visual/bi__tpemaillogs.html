@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 邮件发送记录表(emaillogs)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** pie_v2***/ init_echart("echart_emaillogs_emailaddress_pie_v2",'emaillogs.emailaddress_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** pie_v1***/ init_echart("echart_emaillogs_emailaddress_pie_v1",'emaillogs.emailaddress_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** pie***/ init_echart("echart_emaillogs_emailaddress_pie",'emaillogs.emailaddress_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** line***/ init_echart("echart_emaillogs_emailaddress_line",'emaillogs.emailaddress_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** bar***/ init_echart("echart_emaillogs_emailaddress_bar",'emaillogs.emailaddress_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_emailaddress_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 电子邮件地址 ******************** bar_v1***/ init_echart("echart_emaillogs_emailaddress_bar_v1",'emaillogs.emailaddress_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_subject_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** pie_v2***/ init_echart("echart_emaillogs_subject_pie_v2",'emaillogs.subject_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_subject_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** pie_v1***/ init_echart("echart_emaillogs_subject_pie_v1",'emaillogs.subject_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_subject_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** pie***/ init_echart("echart_emaillogs_subject_pie",'emaillogs.subject_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_subject_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** line***/ init_echart("echart_emaillogs_subject_line",'emaillogs.subject_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_subject_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** bar***/ init_echart("echart_emaillogs_subject_bar",'emaillogs.subject_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_subject_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件主题 ******************** bar_v1***/ init_echart("echart_emaillogs_subject_bar_v1",'emaillogs.subject_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_content_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** pie_v2***/ init_echart("echart_emaillogs_content_pie_v2",'emaillogs.content_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_content_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** pie_v1***/ init_echart("echart_emaillogs_content_pie_v1",'emaillogs.content_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_content_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** pie***/ init_echart("echart_emaillogs_content_pie",'emaillogs.content_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_content_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** line***/ init_echart("echart_emaillogs_content_line",'emaillogs.content_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_content_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** bar***/ init_echart("echart_emaillogs_content_bar",'emaillogs.content_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_content_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 邮件内容 ******************** bar_v1***/ init_echart("echart_emaillogs_content_bar_v1",'emaillogs.content_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** pie_v2***/ init_echart("echart_emaillogs_sendtime_pie_v2",'emaillogs.sendtime_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** pie_v1***/ init_echart("echart_emaillogs_sendtime_pie_v1",'emaillogs.sendtime_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** pie***/ init_echart("echart_emaillogs_sendtime_pie",'emaillogs.sendtime_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** line***/ init_echart("echart_emaillogs_sendtime_line",'emaillogs.sendtime_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** bar***/ init_echart("echart_emaillogs_sendtime_bar",'emaillogs.sendtime_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_sendtime_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送时间 ******************** bar_v1***/ init_echart("echart_emaillogs_sendtime_bar_v1",'emaillogs.sendtime_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_status_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** pie_v2***/ init_echart("echart_emaillogs_status_pie_v2",'emaillogs.status_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_status_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** pie_v1***/ init_echart("echart_emaillogs_status_pie_v1",'emaillogs.status_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_status_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** pie***/ init_echart("echart_emaillogs_status_pie",'emaillogs.status_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_status_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** line***/ init_echart("echart_emaillogs_status_line",'emaillogs.status_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_status_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** bar***/ init_echart("echart_emaillogs_status_bar",'emaillogs.status_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_status_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 发送状态如成功、失败、待发送 ******************** bar_v1***/ init_echart("echart_emaillogs_status_bar_v1",'emaillogs.status_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** pie_v2***/ init_echart("echart_emaillogs_recipientcount_pie_v2",'emaillogs.recipientcount_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** pie_v1***/ init_echart("echart_emaillogs_recipientcount_pie_v1",'emaillogs.recipientcount_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** pie***/ init_echart("echart_emaillogs_recipientcount_pie",'emaillogs.recipientcount_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** line***/ init_echart("echart_emaillogs_recipientcount_line",'emaillogs.recipientcount_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** bar***/ init_echart("echart_emaillogs_recipientcount_bar",'emaillogs.recipientcount_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_recipientcount_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 收件人数量 ******************** bar_v1***/ init_echart("echart_emaillogs_recipientcount_bar_v1",'emaillogs.recipientcount_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** pie_v2***/ init_echart("echart_emaillogs_attachmentcount_pie_v2",'emaillogs.attachmentcount_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** pie_v1***/ init_echart("echart_emaillogs_attachmentcount_pie_v1",'emaillogs.attachmentcount_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_pie" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** pie***/ init_echart("echart_emaillogs_attachmentcount_pie",'emaillogs.attachmentcount_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_line" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** line***/ init_echart("echart_emaillogs_attachmentcount_line",'emaillogs.attachmentcount_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_bar" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** bar***/ init_echart("echart_emaillogs_attachmentcount_bar",'emaillogs.attachmentcount_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_emaillogs_attachmentcount_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 邮件发送记录表 附件数量 ******************** bar_v1***/ init_echart("echart_emaillogs_attachmentcount_bar_v1",'emaillogs.attachmentcount_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

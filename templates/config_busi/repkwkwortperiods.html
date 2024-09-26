@@ -1,0 +1,924 @@
+{% extends '../tp.html' %}
+
+{% block title %}
+报告周期表
+{% endblock %}
+
+{% block body %}
+  <div class="my-container-margin">
+    <div class="divider"></div>
+    {% csrf_token %}
+    <div class="section">
+      <h4>报告周期表</h4>
+      <div>
+        <div class="row">
+          
+          {% if has_add %}
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalinsert" class="waves-effect waves-light btn">添加</button>
+          {% endif %}
+          <div class="divider"></div>
+        
+        
+          
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<a href="/config_visual/bi_tprepkwkwortperiods" target="_blank" class="waves-effect waves-light btn">
+统计分析
+</a>
+</div>
+        </div>  
+        <div class="section">
+          {% if record %}
+            <h3>Empty Data</h3>
+          {% else %}
+          
+<div class="row">
+<form action="" method="get">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-sm-2">
+<button type="submit" class="btn btn-primary" >
+<i class="fas fa-search">搜索</i>
+</button>
+<a type="reset" class="btn btn-default" href="/config_busi/repkwkwortperiods">
+<i class="fas fa-eraser">重置</i>
+</a>
+</div>
+</form>
+
+          </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  
+{% if mcauthfield_repkwkwortperiodid.mcauthview %}
+<td>
+报告周期ID
+</td>
+{% endif %}
+
+{% if mcauthfield_periodname.mcauthview %}
+<td>
+周期名称
+</td>
+{% endif %}
+
+{% if mcauthfield_startdate.mcauthview %}
+<td>
+开始日期
+</td>
+{% endif %}
+
+{% if mcauthfield_enddate.mcauthview %}
+<td>
+结束日期
+</td>
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview %}
+<td>
+是否活跃用于标记当前周期是否还在使用中
+</td>
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview %}
+<td>
+创建者记录创建该周期的用户
+</td>
+{% endif %}
+
+{% if mcauthfield_creationdate.mcauthview %}
+<td>
+创建日期
+</td>
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview %}
+<td>
+最后修改者记录最后修改该周期的用户
+</td>
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview %}
+<td>
+最后修改日期
+</td>
+{% endif %}
+<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    
+ {% if mcauthfield_repkwkwortperiodid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkwortperiodid}}">
+{{record.repkwkwortperiodid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_periodname.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.periodname}}">
+{{record.periodname}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_startdate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.startdate}}">
+{{record.startdate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_enddate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.enddate}}">
+{{record.enddate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_isactive.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.isactive}}">
+{{record.isactive}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_createdby.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.createdby}}">
+{{record.createdby}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_creationdate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.creationdate}}">
+{{record.creationdate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.lkwkwastmodkwkwifiedby}}">
+{{record.lkwkwastmodkwkwifiedby}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.lkwkwastmodkwkwifieddate}}">
+{{record.lkwkwastmodkwkwifieddate}}
+</p>
+
+</td>
+{% endif %}
+ <td>
+                      {% if has_upd %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalupdate">修改</button>
+                      {% endif %}
+                      {% if has_del %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalremove">删除</button>
+                      {% endif %}
+                      {% if has_view %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalpreview">查看</button>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  <!-- Modal Structure -->
+
+  {% if has_add %}
+    <div id="modalinsert" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h4>添加</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="add" hidden />{% csrf_token %}<div class="">
+        {% if mcauthfield_repkwkwortperiodid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkwortperiodid" class="form-label form-group">报告周期ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_periodname.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="periodname" class="form-label form-group">周期名称</label>
+
+<input type="text" class="form-control form-control-lg" name="periodname" id="periodname"{% if not mcauthfield_periodname.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_startdate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="startdate" class="form-label form-group">开始日期</label>
+
+<input type="date" class="form-control form-control-lg" name="startdate" id="startdate" {% if not mcauthfield_startdate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_enddate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="enddate" class="form-label form-group">结束日期</label>
+
+<input type="date" class="form-control form-control-lg" name="enddate" id="enddate" {% if not mcauthfield_enddate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_isactive.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="isactive" class="form-label form-group">是否活跃用于标记当前周期是否还在使用中</label>
+
+<select class="form-select form-select-lg mb-3" name="isactive" id="isactive" {% if not mcauthfield_isactive.mcisblank %}required {% endif %} data-name="insert">
+<option value="True" selected >是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_createdby.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="createdby" class="form-label form-group">创建者记录创建该周期的用户</label>
+
+<input type="text" class="form-control form-control-lg" name="createdby" id="createdby"{% if not mcauthfield_createdby.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_creationdate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="creationdate" class="form-label form-group">创建日期</label>
+
+<input type="date" class="form-control form-control-lg" name="creationdate" id="creationdate" {% if not mcauthfield_creationdate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="lkwkwastmodkwkwifiedby" class="form-label form-group">最后修改者记录最后修改该周期的用户</label>
+
+<input type="text" class="form-control form-control-lg" name="lkwkwastmodkwkwifiedby" id="lkwkwastmodkwkwifiedby"{% if not mcauthfield_lkwkwastmodkwkwifiedby.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="lkwkwastmodkwkwifieddate" class="form-label form-group">最后修改日期</label>
+
+<input type="date" class="form-control form-control-lg" name="lkwkwastmodkwkwifieddate" id="lkwkwastmodkwkwifieddate" {% if not mcauthfield_lkwkwastmodkwkwifieddate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="modal-action modal-close btn-primary btn waves-effect waves-light">提交</button>
+                  <button type="reset" class="modal-action modal-close btn-default btn waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_upd %}
+    <div id="modalupdate" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">修改</div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="upd" hidden />{% csrf_token %}<input type="text" name="_id_upd" value="" data-name="update_id" hidden />
+                <div class="">
+           {% if mcauthfield_repkwkwortperiodid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkwortperiodid_upd"
+class="form-label form-group">
+报告周期ID(repkwkwortperiodid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_periodname.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="periodname_upd"
+class="form-label form-group">
+周期名称(periodname)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="periodname"
+id="periodname_upd"
+placeholder="周期名称"
+{% if not mcauthfield_periodname.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_periodname.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_startdate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="startdate_upd"
+class="form-label form-group">
+开始日期(startdate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="startdate"
+id="startdate_upd"
+placeholder="开始日期"
+{% if not mcauthfield_startdate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_startdate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_enddate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="enddate_upd"
+class="form-label form-group">
+结束日期(enddate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="enddate"
+id="enddate_upd"
+placeholder="结束日期"
+{% if not mcauthfield_enddate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_enddate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_isactive.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="isactive_upd"
+class="form-label form-group">
+是否活跃用于标记当前周期是否还在使用中(isactive)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="isactive"
+id="isactive_upd"
+{% if not mcauthfield_isactive.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_isactive.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="True" selected>是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_createdby.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="createdby_upd"
+class="form-label form-group">
+创建者记录创建该周期的用户(createdby)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="createdby"
+id="createdby_upd"
+placeholder="创建者记录创建该周期的用户"
+{% if not mcauthfield_createdby.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_createdby.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_creationdate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="creationdate_upd"
+class="form-label form-group">
+创建日期(creationdate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="creationdate"
+id="creationdate_upd"
+placeholder="创建日期"
+{% if not mcauthfield_creationdate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_creationdate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="lkwkwastmodkwkwifiedby_upd"
+class="form-label form-group">
+最后修改者记录最后修改该周期的用户(lkwkwastmodkwkwifiedby)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="lkwkwastmodkwkwifiedby"
+id="lkwkwastmodkwkwifiedby_upd"
+placeholder="最后修改者记录最后修改该周期的用户"
+{% if not mcauthfield_lkwkwastmodkwkwifiedby.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_lkwkwastmodkwkwifiedby.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="lkwkwastmodkwkwifieddate_upd"
+class="form-label form-group">
+最后修改日期(lkwkwastmodkwkwifieddate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="lkwkwastmodkwkwifieddate"
+id="lkwkwastmodkwkwifieddate_upd"
+placeholder="最后修改日期"
+{% if not mcauthfield_lkwkwastmodkwkwifieddate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_lkwkwastmodkwkwifieddate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">提交</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_del %}
+    <div id="modalremove" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">删除</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>确认删除这条记录吗?</p>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="del" hidden />{% csrf_token %}<input type="text" name="_id" value="" data-name="remove" hidden />
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">确认</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_view %}
+    <div id="modalpreview" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <h4>预览</h4>
+          <div class="">
+            
+{% if mcauthfield_repkwkwortperiodid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">报告周期ID</p>
+
+<p id="repkwkwortperiodid_view">
+{{record.repkwkwortperiodid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_periodname.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">周期名称</p>
+
+<p id="periodname_view">
+{{record.periodname|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_startdate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">开始日期</p>
+
+<p id="startdate_view">
+{{record.startdate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_enddate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">结束日期</p>
+
+<p id="enddate_view">
+{{record.enddate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">是否活跃用于标记当前周期是否还在使用中</p>
+
+<p id="isactive_view">
+{{record.isactive|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">创建者记录创建该周期的用户</p>
+
+<p id="createdby_view">
+{{record.createdby|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_creationdate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">创建日期</p>
+
+<p id="creationdate_view">
+{{record.creationdate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">最后修改者记录最后修改该周期的用户</p>
+
+<p id="lkwkwastmodkwkwifiedby_view">
+{{record.lkwkwastmodkwkwifiedby|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">最后修改日期</p>
+
+<p id="lkwkwastmodkwkwifieddate_view">
+{{record.lkwkwastmodkwkwifieddate|safe }}
+</p>
+
+</div>
+{% endif %}
+<div class="modal-footer">
+              <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block script-footer %}
+<script>
+  function myreset(){
+window.location.href= "/config_busi/repkwkwortperiods";
+};
+if (document.getElementById("modalupdate")){
+document.getElementById("modalupdate").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortperiods',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+{% if mcauthfield_repkwkwortperiodid.mcauthview %}
+$("#repkwkwortperiodid_upd").val(resp.ins.repkwkwortperiodid);
+{% endif %}
+
+{% if mcauthfield_periodname.mcauthview %}
+$("#periodname_upd").val(resp.ins.periodname);
+{% endif %}
+
+{% if mcauthfield_startdate.mcauthview %}
+$("#startdate_upd").val(resp.ins.startdate);
+{% endif %}
+
+{% if mcauthfield_enddate.mcauthview %}
+$("#enddate_upd").val(resp.ins.enddate);
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview %}
+$("#isactive_upd").val(resp.ins.isactive);
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview %}
+$("#createdby_upd").val(resp.ins.createdby);
+{% endif %}
+
+{% if mcauthfield_creationdate.mcauthview %}
+$("#creationdate_upd").val(resp.ins.creationdate);
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview %}
+$("#lkwkwastmodkwkwifiedby_upd").val(resp.ins.lkwkwastmodkwkwifiedby);
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview %}
+$("#lkwkwastmodkwkwifieddate_upd").val(resp.ins.lkwkwastmodkwkwifieddate);
+{% endif %}
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+function upd(_id){
+let data = {
+optype:'get',
+_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value,
+
+{% if mcauthfield_repkwkwortperiodid.mcauthchange %}
+repkwkwortperiodid:$("#repkwkwortperiodid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_periodname.mcauthchange %}
+periodname:$("#periodname_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_startdate.mcauthchange %}
+startdate:$("#startdate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_enddate.mcauthchange %}
+enddate:$("#enddate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthchange %}
+isactive:$("#isactive_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthchange %}
+createdby:$("#createdby_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_creationdate.mcauthchange %}
+creationdate:$("#creationdate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthchange %}
+lkwkwastmodkwkwifiedby:$("#lkwkwastmodkwkwifiedby_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthchange %}
+lkwkwastmodkwkwifieddate:$("#lkwkwastmodkwkwifieddate_upd]").val(),
+{% endif %}
+
+}
+$.ajax({
+url: '/config_busi/repkwkwortperiods',
+method: 'post',
+data: data,
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+if (document.getElementById("modalpreview")) {
+document.getElementById("modalpreview").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkwortperiods',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+
+
+{% if mcauthfield_repkwkwortperiodid.mcauthview %}
+document.getElementById("repkwkwortperiodid_view").innerHTML=resp.ins.repkwkwortperiodid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_periodname.mcauthview %}
+document.getElementById("periodname_view").innerHTML=resp.ins.periodname;
+{% endif %}
+
+
+
+
+{% if mcauthfield_startdate.mcauthview %}
+document.getElementById("startdate_view").innerHTML=resp.ins.startdate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_enddate.mcauthview %}
+document.getElementById("enddate_view").innerHTML=resp.ins.enddate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_isactive.mcauthview %}
+document.getElementById("isactive_view").innerHTML=resp.ins.isactive;
+{% endif %}
+
+
+
+
+{% if mcauthfield_createdby.mcauthview %}
+document.getElementById("createdby_view").innerHTML=resp.ins.createdby;
+{% endif %}
+
+
+
+
+{% if mcauthfield_creationdate.mcauthview %}
+document.getElementById("creationdate_view").innerHTML=resp.ins.creationdate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_lkwkwastmodkwkwifiedby.mcauthview %}
+document.getElementById("lkwkwastmodkwkwifiedby_view").innerHTML=resp.ins.lkwkwastmodkwkwifiedby;
+{% endif %}
+
+
+
+
+{% if mcauthfield_lkwkwastmodkwkwifieddate.mcauthview %}
+document.getElementById("lkwkwastmodkwkwifieddate_view").innerHTML=resp.ins.lkwkwastmodkwkwifieddate;
+{% endif %}
+
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+if (document.getElementById("modalremove")) {
+document.getElementById("modalremove").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=remove]").val(_id);
+});
+};
+function del(_id){
+$.ajax({
+url: '/config_busi/repkwkwortperiods',
+method: 'post',
+data: {optype:'del',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+</script>
+{% endblock %}

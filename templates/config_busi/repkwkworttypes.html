@@ -1,0 +1,1011 @@
+{% extends '../tp.html' %}
+
+{% block title %}
+报告类型表
+{% endblock %}
+
+{% block body %}
+  <div class="my-container-margin">
+    <div class="divider"></div>
+    {% csrf_token %}
+    <div class="section">
+      <h4>报告类型表</h4>
+      <div>
+        <div class="row">
+          
+          {% if has_add %}
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalinsert" class="waves-effect waves-light btn">添加</button>
+          {% endif %}
+          <div class="divider"></div>
+        
+        
+          
+<div class="col-sm-10">
+</div>
+<div class="col-sm-2">
+<a href="/config_visual/bi_tprepkwkworttypes" target="_blank" class="waves-effect waves-light btn">
+统计分析
+</a>
+</div>
+        </div>  
+        <div class="section">
+          {% if record %}
+            <h3>Empty Data</h3>
+          {% else %}
+          
+<div class="row">
+<form action="" method="get">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+<label for="createdby">创建者ID关联用户(createdby)</label>
+<select name="createdby_search" id="createdby_search">
+<option value="">未选择</option>
+{% for record in data_mc_users_55300 %}
+<option value="{{record.value}}">
+<p>{{record.value}}:{{record.label }}</p>
+</option>
+{% endfor %}
+</select>
+</div>
+
+
+
+
+
+<div class="form-group">
+<label for="modkwkwifiedby">修改者ID关联用户(modkwkwifiedby)</label>
+<select name="modkwkwifiedby_search" id="modkwkwifiedby_search">
+<option value="">未选择</option>
+{% for record in data_mc_users_55302 %}
+<option value="{{record.value}}">
+<p>{{record.value}}:{{record.label }}</p>
+</option>
+{% endfor %}
+</select>
+</div>
+
+
+
+<div class="form-group">
+<label for="parentrepkwkworttypeid">父报告类型ID用于构建报告类型的层级关系关联本的RepkwkwortTypeID(parentrepkwkworttypeid)</label>
+<select name="parentrepkwkworttypeid_search" id="parentrepkwkworttypeid_search">
+<option value="">未选择</option>
+{% for record in data_mc_repkwkworttypes_55303 %}
+<option value="{{record.value}}">
+<p>{{record.value}}:{{record.label }}</p>
+</option>
+{% endfor %}
+</select>
+</div>
+
+
+<div class="col-sm-2">
+<button type="submit" class="btn btn-primary" >
+<i class="fas fa-search">搜索</i>
+</button>
+<a type="reset" class="btn btn-default" href="/config_busi/repkwkworttypes">
+<i class="fas fa-eraser">重置</i>
+</a>
+</div>
+</form>
+
+          </div>
+            <table class="table table-striped table-hover table-bordered">
+              <thead>
+                <tr>
+                  
+{% if mcauthfield_repkwkworttypeid.mcauthview %}
+<td>
+报告类型ID
+</td>
+{% endif %}
+
+{% if mcauthfield_repkwkworttypename.mcauthview %}
+<td>
+报告类型名称
+</td>
+{% endif %}
+
+{% if mcauthfield_description.mcauthview %}
+<td>
+描述
+</td>
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview %}
+<td>
+是否激活用于控制该报告类型是否可用
+</td>
+{% endif %}
+
+{% if mcauthfield_createddate.mcauthview %}
+<td>
+创建日期
+</td>
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview %}
+<td>
+创建者ID关联用户
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwifieddate.mcauthview %}
+<td>
+修改日期
+</td>
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedby.mcauthview %}
+<td>
+修改者ID关联用户
+</td>
+{% endif %}
+
+{% if mcauthfield_parentrepkwkworttypeid.mcauthview %}
+<td>
+父报告类型ID用于构建报告类型的层级关系关联本的RepkwkwortTypeID
+</td>
+{% endif %}
+<th>操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr>
+                    
+ {% if mcauthfield_repkwkworttypeid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkworttypeid}}">
+{{record.repkwkworttypeid}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_repkwkworttypename.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.repkwkworttypename}}">
+{{record.repkwkworttypename}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_description.mcauthview %}
+<td class="text-nowrap-cell">
+
+{% if record.description %}
+{{record.description.name}}
+<p title="{{record.description}}">
+{{record.description|truncatechars:20}}
+</p>
+{% endif %}
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_isactive.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.isactive}}">
+{{record.isactive}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_createddate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.createddate}}">
+{{record.createddate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_createdby.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.createdby}}">
+{{record.createdby}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwifieddate.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.modkwkwifieddate}}">
+{{record.modkwkwifieddate}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_modkwkwifiedby.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.modkwkwifiedby}}">
+{{record.modkwkwifiedby}}
+</p>
+
+</td>
+{% endif %}
+ 
+ {% if mcauthfield_parentrepkwkworttypeid.mcauthview %}
+<td class="text-nowrap-cell">
+
+<p title="{{record.parentrepkwkworttypeid}}">
+{{record.parentrepkwkworttypeid}}
+</p>
+
+</td>
+{% endif %}
+ <td>
+                      {% if has_upd %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalupdate">修改</button>
+                      {% endif %}
+                      {% if has_del %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalremove">删除</button>
+                      {% endif %}
+                      {% if has_view %}
+                        <button data-bs-data="{{ record.id }}" data-bs-toggle="modal" data-bs-target="#modalpreview">查看</button>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block modal %}
+  <!-- Modal Structure -->
+
+  {% if has_add %}
+    <div id="modalinsert" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">
+              <h4>添加</h4>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="add" hidden />{% csrf_token %}<div class="">
+        {% if mcauthfield_repkwkworttypeid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkworttypeid" class="form-label form-group">报告类型ID</label>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_repkwkworttypename.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="repkwkworttypename" class="form-label form-group">报告类型名称</label>
+
+<input type="text" class="form-control form-control-lg" name="repkwkworttypename" id="repkwkworttypename"{% if not mcauthfield_repkwkworttypename.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_description.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="description" class="form-label form-group">描述</label>
+
+<textarea class="form-control form-control-lg" name="description" id="description" {% if not mcauthfield_description.mcisblank %}required {% endif %}data-name="insert"></textarea>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_isactive.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="isactive" class="form-label form-group">是否激活用于控制该报告类型是否可用</label>
+
+<select class="form-select form-select-lg mb-3" name="isactive" id="isactive" {% if not mcauthfield_isactive.mcisblank %}required {% endif %} data-name="insert">
+<option value="True" selected >是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_createddate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="createddate" class="form-label form-group">创建日期</label>
+
+<input type="date" class="form-control form-control-lg" name="createddate" id="createddate" {% if not mcauthfield_createddate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_createdby.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="createdby" class="form-label form-group">创建者ID关联用户</label>
+
+<select class="form-select form-select-lg mb-3" name="createdby" id="createdby" {% if not mcauthfield_createdby.mcisblank %}required {% endif %} data-name="insert"> <option value="" selected>未选择</option> {% for record in data_mc_users_55300 %} 
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+ {% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwifieddate.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwifieddate" class="form-label form-group">修改日期</label>
+
+<input type="date" class="form-control form-control-lg" name="modkwkwifieddate" id="modkwkwifieddate" {% if not mcauthfield_modkwkwifieddate.mcisblank %}required {% endif %}data-name="insert">
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_modkwkwifiedby.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="modkwkwifiedby" class="form-label form-group">修改者ID关联用户</label>
+
+<select class="form-select form-select-lg mb-3" name="modkwkwifiedby" id="modkwkwifiedby" {% if not mcauthfield_modkwkwifiedby.mcisblank %}required {% endif %} data-name="insert"> <option value="" selected>未选择</option> {% for record in data_mc_users_55302 %} 
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+ {% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+        {% if mcauthfield_parentrepkwkworttypeid.mcauthchange  %}
+<div class="input-field col s12 mb-3">
+    <label for="parentrepkwkworttypeid" class="form-label form-group">父报告类型ID用于构建报告类型的层级关系关联本的RepkwkwortTypeID</label>
+
+<select class="form-select form-select-lg mb-3" name="parentrepkwkworttypeid" id="parentrepkwkworttypeid" {% if not mcauthfield_parentrepkwkworttypeid.mcisblank %}required {% endif %} data-name="insert"> <option value="" selected>未选择</option> {% for record in data_mc_repkwkworttypes_55303 %} 
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+ {% endfor %}
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="modal-action modal-close btn-primary btn waves-effect waves-light">提交</button>
+                  <button type="reset" class="modal-action modal-close btn-default btn waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_upd %}
+    <div id="modalupdate" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">修改</div>
+          </div>
+          <div class="modal-body">
+            <div class="">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="upd" hidden />{% csrf_token %}<input type="text" name="_id_upd" value="" data-name="update_id" hidden />
+                <div class="">
+           {% if mcauthfield_repkwkworttypeid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkworttypeid_upd"
+class="form-label form-group">
+报告类型ID(repkwkworttypeid)
+</label>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_repkwkworttypename.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="repkwkworttypename_upd"
+class="form-label form-group">
+报告类型名称(repkwkworttypename)
+</label>
+
+<input type="text" class="validate form-control form-control-lg"
+name="repkwkworttypename"
+id="repkwkworttypename_upd"
+placeholder="报告类型名称"
+{% if not mcauthfield_repkwkworttypename.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_repkwkworttypename.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_description.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="description_upd"
+class="form-label form-group">
+描述(description)
+</label>
+
+<textarea type="text" class="validate form-control form-control-lg"
+name="description"
+id="description_upd"
+placeholder="描述"
+{% if not mcauthfield_description.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_description.mcauthchange %}
+readonly
+{% endif %}
+data-name="update"></textarea>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_isactive.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="isactive_upd"
+class="form-label form-group">
+是否激活用于控制该报告类型是否可用(isactive)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="isactive"
+id="isactive_upd"
+{% if not mcauthfield_isactive.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_isactive.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="True" selected>是</option>
+<option value="False">否</option>
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_createddate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="createddate_upd"
+class="form-label form-group">
+创建日期(createddate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="createddate"
+id="createddate_upd"
+placeholder="创建日期"
+{% if not mcauthfield_createddate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_createddate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_createdby.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="createdby_upd"
+class="form-label form-group">
+创建者ID关联用户(createdby)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="createdby"
+id="createdby_upd"
+{% if not mcauthfield_createdby.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_createdby.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="">未选择</option>
+{% for record in data_mc_users_55300 %}
+
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+
+{% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwifieddate.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwifieddate_upd"
+class="form-label form-group">
+修改日期(modkwkwifieddate)
+</label>
+
+<input type="date" class="validate form-control form-control-lg"
+name="modkwkwifieddate"
+id="modkwkwifieddate_upd"
+placeholder="修改日期"
+{% if not mcauthfield_modkwkwifieddate.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_modkwkwifieddate.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_modkwkwifiedby.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="modkwkwifiedby_upd"
+class="form-label form-group">
+修改者ID关联用户(modkwkwifiedby)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="modkwkwifiedby"
+id="modkwkwifiedby_upd"
+{% if not mcauthfield_modkwkwifiedby.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_modkwkwifiedby.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="">未选择</option>
+{% for record in data_mc_users_55302 %}
+
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+
+{% endfor %}
+</select>
+
+</div>
+        {% endif %}
+
+           {% if mcauthfield_parentrepkwkworttypeid.mcauthview %}
+<div class="input-field col s12 mb-3">
+        <label for="parentrepkwkworttypeid_upd"
+class="form-label form-group">
+父报告类型ID用于构建报告类型的层级关系关联本的RepkwkwortTypeID(parentrepkwkworttypeid)
+</label>
+
+<select class="form-select form-select-lg mb-3" name="parentrepkwkworttypeid"
+id="parentrepkwkworttypeid_upd"
+{% if not mcauthfield_parentrepkwkworttypeid.mcisblank %}
+required
+{% endif %}
+{% if not mcauthfield_parentrepkwkworttypeid.mcauthchange %}
+readonly
+{% endif %}
+data-name="update">
+<option value="">未选择</option>
+{% for record in data_mc_repkwkworttypes_55303 %}
+
+<option value="{{record.value}}">
+
+<p>{{record.value}}:{{record.label }}</p>
+
+</option>
+
+{% endfor %}
+</select>
+
+</div>
+        {% endif %}
+</div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">提交</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_del %}
+    <div id="modalremove" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">删除</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>确认删除这条记录吗?</p>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <form action="" method="post" enctype="multipart/form-data" class="col s12">
+                <input type="text" name="optype" value="del" hidden />{% csrf_token %}<input type="text" name="_id" value="" data-name="remove" hidden />
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn modal-action modal-close btn-primary waves-effect waves-light">确认</button>
+                  <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">取消</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if has_view %}
+    <div id="modalpreview" class="modal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-custom">
+        <div class="modal-content">
+          <h4>预览</h4>
+          <div class="">
+            
+{% if mcauthfield_repkwkworttypeid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">报告类型ID</p>
+
+<p id="repkwkworttypeid_view">
+{{record.repkwkworttypeid|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_repkwkworttypename.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">报告类型名称</p>
+
+<p id="repkwkworttypename_view">
+{{record.repkwkworttypename|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_description.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">描述</p>
+
+<p id="description_view">
+{{record.description|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">是否激活用于控制该报告类型是否可用</p>
+
+<p id="isactive_view">
+{{record.isactive|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_createddate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">创建日期</p>
+
+<p id="createddate_view">
+{{record.createddate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">创建者ID关联用户</p>
+
+<p id="createdby_view">
+{{record.createdby|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwifieddate.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改日期</p>
+
+<p id="modkwkwifieddate_view">
+{{record.modkwkwifieddate|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedby.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">修改者ID关联用户</p>
+
+<p id="modkwkwifiedby_view">
+{{record.modkwkwifiedby|safe }}
+</p>
+
+</div>
+{% endif %}
+
+{% if mcauthfield_parentrepkwkworttypeid.mcauthview  %}
+<div class="input-field col s12 mb-3">
+    <p class="text-bodyform-label">父报告类型ID用于构建报告类型的层级关系关联本的RepkwkwortTypeID</p>
+
+<p id="parentrepkwkworttypeid_view">
+{{record.parentrepkwkworttypeid|safe }}
+</p>
+
+</div>
+{% endif %}
+<div class="modal-footer">
+              <button type="reset" class="btn modal-action modal-close btn-default waves-effect waves-light" data-bs-dismiss="modal">关闭</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block script-footer %}
+<script>
+  function myreset(){
+window.location.href= "/config_busi/repkwkworttypes";
+};
+if (document.getElementById("modalupdate")){
+document.getElementById("modalupdate").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkworttypes',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+{% if mcauthfield_repkwkworttypeid.mcauthview %}
+$("#repkwkworttypeid_upd").val(resp.ins.repkwkworttypeid);
+{% endif %}
+
+{% if mcauthfield_repkwkworttypename.mcauthview %}
+$("#repkwkworttypename_upd").val(resp.ins.repkwkworttypename);
+{% endif %}
+
+{% if mcauthfield_description.mcauthview %}
+$("#description_upd").val(resp.ins.description);
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthview %}
+$("#isactive_upd").val(resp.ins.isactive);
+{% endif %}
+
+{% if mcauthfield_createddate.mcauthview %}
+$("#createddate_upd").val(resp.ins.createddate);
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthview %}
+$("#createdby_upd").val(resp.ins.createdby);
+{% endif %}
+
+{% if mcauthfield_modkwkwifieddate.mcauthview %}
+$("#modkwkwifieddate_upd").val(resp.ins.modkwkwifieddate);
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedby.mcauthview %}
+$("#modkwkwifiedby_upd").val(resp.ins.modkwkwifiedby);
+{% endif %}
+
+{% if mcauthfield_parentrepkwkworttypeid.mcauthview %}
+$("#parentrepkwkworttypeid_upd").val(resp.ins.parentrepkwkworttypeid);
+{% endif %}
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+function upd(_id){
+let data = {
+optype:'get',
+_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value,
+
+{% if mcauthfield_repkwkworttypeid.mcauthchange %}
+repkwkworttypeid:$("#repkwkworttypeid_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_repkwkworttypename.mcauthchange %}
+repkwkworttypename:$("#repkwkworttypename_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_description.mcauthchange %}
+description:$("#description_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_isactive.mcauthchange %}
+isactive:$("#isactive_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_createddate.mcauthchange %}
+createddate:$("#createddate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_createdby.mcauthchange %}
+createdby:$("#createdby_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwifieddate.mcauthchange %}
+modkwkwifieddate:$("#modkwkwifieddate_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_modkwkwifiedby.mcauthchange %}
+modkwkwifiedby:$("#modkwkwifiedby_upd]").val(),
+{% endif %}
+
+{% if mcauthfield_parentrepkwkworttypeid.mcauthchange %}
+parentrepkwkworttypeid:$("#parentrepkwkworttypeid_upd]").val(),
+{% endif %}
+
+}
+$.ajax({
+url: '/config_busi/repkwkworttypes',
+method: 'post',
+data: data,
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+if (document.getElementById("modalpreview")) {
+document.getElementById("modalpreview").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=update_id]").val(_id);
+$.ajax({
+url: '/config_busi/repkwkworttypes',
+method: 'post',
+data: {optype:'get',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+
+
+
+{% if mcauthfield_repkwkworttypeid.mcauthview %}
+document.getElementById("repkwkworttypeid_view").innerHTML=resp.ins.repkwkworttypeid;
+{% endif %}
+
+
+
+
+{% if mcauthfield_repkwkworttypename.mcauthview %}
+document.getElementById("repkwkworttypename_view").innerHTML=resp.ins.repkwkworttypename;
+{% endif %}
+
+
+
+
+{% if mcauthfield_description.mcauthview %}
+document.getElementById("description_view").innerHTML=resp.ins.description;
+{% endif %}
+
+
+
+
+{% if mcauthfield_isactive.mcauthview %}
+document.getElementById("isactive_view").innerHTML=resp.ins.isactive;
+{% endif %}
+
+
+
+
+{% if mcauthfield_createddate.mcauthview %}
+document.getElementById("createddate_view").innerHTML=resp.ins.createddate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_createdby.mcauthview %}
+document.getElementById("createdby_view").innerHTML=resp.ins.createdby;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwifieddate.mcauthview %}
+document.getElementById("modkwkwifieddate_view").innerHTML=resp.ins.modkwkwifieddate;
+{% endif %}
+
+
+
+
+{% if mcauthfield_modkwkwifiedby.mcauthview %}
+document.getElementById("modkwkwifiedby_view").innerHTML=resp.ins.modkwkwifiedby;
+{% endif %}
+
+
+
+
+{% if mcauthfield_parentrepkwkworttypeid.mcauthview %}
+document.getElementById("parentrepkwkworttypeid_view").innerHTML=resp.ins.parentrepkwkworttypeid;
+{% endif %}
+
+
+},
+error: err => {
+},
+complete: res => {
+},
+})
+});
+};
+if (document.getElementById("modalremove")) {
+document.getElementById("modalremove").addEventListener("show.bs.modal",event=>{
+let _id = event.relatedTarget.getAttribute('data-bs-data');
+$("input[data-name=remove]").val(_id);
+});
+};
+function del(_id){
+$.ajax({
+url: '/config_busi/repkwkworttypes',
+method: 'post',
+data: {optype:'del',_id:_id,csrfmiddlewaretoken:document.querySelector('[name=csrfmiddlewaretoken]').value}, // JSON.stringify(data),
+dataType: 'json',
+success: resp => {
+console.log(resp);
+},
+error: err => {
+},
+complete: res => {
+},
+})
+};
+</script>
+{% endblock %}

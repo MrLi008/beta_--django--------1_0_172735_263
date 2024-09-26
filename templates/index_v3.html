@@ -1,0 +1,825 @@
+{% extends 'tp_3.html' %}
+
+{% block title %}
+beta_基于django的周报管理系统
+
+{% endblock %}
+{% block header-image %}
+{% include 'header-image.html' %}
+
+{% endblock %}
+
+{% block body %}
+
+<div class="my-container-margin">
+    <div class="row">
+        <div class="col s6">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8094-tab" data-bs-toggle="tab"
+data-bs-target="#8094-tab-pane"
+type="button" role="tab" aria-controls="8094-tab-pane" aria-selected="true">
+用户表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8095-tab" data-bs-toggle="tab"
+data-bs-target="#8095-tab-pane"
+type="button" role="tab" aria-controls="8095-tab-pane" aria-selected="true">
+角色表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8096-tab" data-bs-toggle="tab"
+data-bs-target="#8096-tab-pane"
+type="button" role="tab" aria-controls="8096-tab-pane" aria-selected="true">
+用户角色关联表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8097-tab" data-bs-toggle="tab"
+data-bs-target="#8097-tab-pane"
+type="button" role="tab" aria-controls="8097-tab-pane" aria-selected="true">
+周报模板表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8098-tab" data-bs-toggle="tab"
+data-bs-target="#8098-tab-pane"
+type="button" role="tab" aria-controls="8098-tab-pane" aria-selected="true">
+周报表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8099-tab" data-bs-toggle="tab"
+data-bs-target="#8099-tab-pane"
+type="button" role="tab" aria-controls="8099-tab-pane" aria-selected="true">
+报告周期表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8100-tab" data-bs-toggle="tab"
+data-bs-target="#8100-tab-pane"
+type="button" role="tab" aria-controls="8100-tab-pane" aria-selected="true">
+报告状态表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8101-tab" data-bs-toggle="tab"
+data-bs-target="#8101-tab-pane"
+type="button" role="tab" aria-controls="8101-tab-pane" aria-selected="true">
+报告类型表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8102-tab" data-bs-toggle="tab"
+data-bs-target="#8102-tab-pane"
+type="button" role="tab" aria-controls="8102-tab-pane" aria-selected="true">
+报告审核表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8103-tab" data-bs-toggle="tab"
+data-bs-target="#8103-tab-pane"
+type="button" role="tab" aria-controls="8103-tab-pane" aria-selected="true">
+审核意见表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8104-tab" data-bs-toggle="tab"
+data-bs-target="#8104-tab-pane"
+type="button" role="tab" aria-controls="8104-tab-pane" aria-selected="true">
+部门表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8105-tab" data-bs-toggle="tab"
+data-bs-target="#8105-tab-pane"
+type="button" role="tab" aria-controls="8105-tab-pane" aria-selected="true">
+员工表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8106-tab" data-bs-toggle="tab"
+data-bs-target="#8106-tab-pane"
+type="button" role="tab" aria-controls="8106-tab-pane" aria-selected="true">
+员工周报关联表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8107-tab" data-bs-toggle="tab"
+data-bs-target="#8107-tab-pane"
+type="button" role="tab" aria-controls="8107-tab-pane" aria-selected="true">
+通知表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8108-tab" data-bs-toggle="tab"
+data-bs-target="#8108-tab-pane"
+type="button" role="tab" aria-controls="8108-tab-pane" aria-selected="true">
+通知类型表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8109-tab" data-bs-toggle="tab"
+data-bs-target="#8109-tab-pane"
+type="button" role="tab" aria-controls="8109-tab-pane" aria-selected="true">
+邮件发送记录表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8110-tab" data-bs-toggle="tab"
+data-bs-target="#8110-tab-pane"
+type="button" role="tab" aria-controls="8110-tab-pane" aria-selected="true">
+短信发送记录表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8111-tab" data-bs-toggle="tab"
+data-bs-target="#8111-tab-pane"
+type="button" role="tab" aria-controls="8111-tab-pane" aria-selected="true">
+附件表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8112-tab" data-bs-toggle="tab"
+data-bs-target="#8112-tab-pane"
+type="button" role="tab" aria-controls="8112-tab-pane" aria-selected="true">
+附件类型表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8113-tab" data-bs-toggle="tab"
+data-bs-target="#8113-tab-pane"
+type="button" role="tab" aria-controls="8113-tab-pane" aria-selected="true">
+报告提交历史表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8114-tab" data-bs-toggle="tab"
+data-bs-target="#8114-tab-pane"
+type="button" role="tab" aria-controls="8114-tab-pane" aria-selected="true">
+报告修改历史表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8115-tab" data-bs-toggle="tab"
+data-bs-target="#8115-tab-pane"
+type="button" role="tab" aria-controls="8115-tab-pane" aria-selected="true">
+报告评论表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8116-tab" data-bs-toggle="tab"
+data-bs-target="#8116-tab-pane"
+type="button" role="tab" aria-controls="8116-tab-pane" aria-selected="true">
+评论回复表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8117-tab" data-bs-toggle="tab"
+data-bs-target="#8117-tab-pane"
+type="button" role="tab" aria-controls="8117-tab-pane" aria-selected="true">
+报告评分表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8118-tab" data-bs-toggle="tab"
+data-bs-target="#8118-tab-pane"
+type="button" role="tab" aria-controls="8118-tab-pane" aria-selected="true">
+评分标准表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8119-tab" data-bs-toggle="tab"
+data-bs-target="#8119-tab-pane"
+type="button" role="tab" aria-controls="8119-tab-pane" aria-selected="true">
+权限表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8120-tab" data-bs-toggle="tab"
+data-bs-target="#8120-tab-pane"
+type="button" role="tab" aria-controls="8120-tab-pane" aria-selected="true">
+权限角色关联表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8121-tab" data-bs-toggle="tab"
+data-bs-target="#8121-tab-pane"
+type="button" role="tab" aria-controls="8121-tab-pane" aria-selected="true">
+系统日志表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8122-tab" data-bs-toggle="tab"
+data-bs-target="#8122-tab-pane"
+type="button" role="tab" aria-controls="8122-tab-pane" aria-selected="true">
+报表配置表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8123-tab" data-bs-toggle="tab"
+data-bs-target="#8123-tab-pane"
+type="button" role="tab" aria-controls="8123-tab-pane" aria-selected="true">
+报表导出记录表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8124-tab" data-bs-toggle="tab"
+data-bs-target="#8124-tab-pane"
+type="button" role="tab" aria-controls="8124-tab-pane" aria-selected="true">
+报表模板字段表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8125-tab" data-bs-toggle="tab"
+data-bs-target="#8125-tab-pane"
+type="button" role="tab" aria-controls="8125-tab-pane" aria-selected="true">
+报表字段类型表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8126-tab" data-bs-toggle="tab"
+data-bs-target="#8126-tab-pane"
+type="button" role="tab" aria-controls="8126-tab-pane" aria-selected="true">
+报表数据表管理
+</button>
+</li>
+
+<li class="nav-item" role="presentation">
+<button class="nav-link active" id="8127-tab" data-bs-toggle="tab"
+data-bs-target="#8127-tab-pane"
+type="button" role="tab" aria-controls="8127-tab-pane" aria-selected="true">
+系统管理员管理
+</button>
+</li>
+
+</ul>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="my-container-margin">
+    <div class="tab-content" id="myTabContent">
+        
+<div class="tab-pane fade show active" id="8094-tab-pane" role="tabpanel"
+aria-labelledby="8094-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8094" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_users %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8095-tab-pane" role="tabpanel"
+aria-labelledby="8095-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8095" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_roles %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8096-tab-pane" role="tabpanel"
+aria-labelledby="8096-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8096" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_userrolerelations %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8097-tab-pane" role="tabpanel"
+aria-labelledby="8097-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8097" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_weeklyrepkwkworttemplates %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8098-tab-pane" role="tabpanel"
+aria-labelledby="8098-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8098" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_weeklyrepkwkworts %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8099-tab-pane" role="tabpanel"
+aria-labelledby="8099-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8099" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortperiods %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8100-tab-pane" role="tabpanel"
+aria-labelledby="8100-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8100" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortstatuses %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8101-tab-pane" role="tabpanel"
+aria-labelledby="8101-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8101" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkworttypes %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8102-tab-pane" role="tabpanel"
+aria-labelledby="8102-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8102" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortaudits %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8103-tab-pane" role="tabpanel"
+aria-labelledby="8103-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8103" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_auditcomments %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8104-tab-pane" role="tabpanel"
+aria-labelledby="8104-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8104" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_departments %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8105-tab-pane" role="tabpanel"
+aria-labelledby="8105-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8105" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_employees %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8106-tab-pane" role="tabpanel"
+aria-labelledby="8106-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8106" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_employeeweeklyrepkwkwortrelations %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8107-tab-pane" role="tabpanel"
+aria-labelledby="8107-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8107" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_notkwkwifications %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8108-tab-pane" role="tabpanel"
+aria-labelledby="8108-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8108" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_notkwkwificationtypes %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8109-tab-pane" role="tabpanel"
+aria-labelledby="8109-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8109" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_emaillogs %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8110-tab-pane" role="tabpanel"
+aria-labelledby="8110-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8110" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_smslogs %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8111-tab-pane" role="tabpanel"
+aria-labelledby="8111-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8111" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_attachments %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8112-tab-pane" role="tabpanel"
+aria-labelledby="8112-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8112" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_attachmenttypes %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8113-tab-pane" role="tabpanel"
+aria-labelledby="8113-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8113" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortsubmkwkwissionhkwkwistkwkwories %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8114-tab-pane" role="tabpanel"
+aria-labelledby="8114-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8114" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortmodkwkwificationhkwkwistkwkwories %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8115-tab-pane" role="tabpanel"
+aria-labelledby="8115-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8115" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortcomments %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8116-tab-pane" role="tabpanel"
+aria-labelledby="8116-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8116" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_commentreplies %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8117-tab-pane" role="tabpanel"
+aria-labelledby="8117-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8117" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortratkwkwings %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8118-tab-pane" role="tabpanel"
+aria-labelledby="8118-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8118" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_ratkwkwingcriteria %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8119-tab-pane" role="tabpanel"
+aria-labelledby="8119-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8119" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_permkwkwissions %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8120-tab-pane" role="tabpanel"
+aria-labelledby="8120-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8120" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_permkwkwissionrolerelations %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8121-tab-pane" role="tabpanel"
+aria-labelledby="8121-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8121" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_systemlogs %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8122-tab-pane" role="tabpanel"
+aria-labelledby="8122-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8122" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortconfigurations %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8123-tab-pane" role="tabpanel"
+aria-labelledby="8123-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8123" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortexpkwkwortreckwkwords %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8124-tab-pane" role="tabpanel"
+aria-labelledby="8124-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8124" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkworttemplatefields %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8125-tab-pane" role="tabpanel"
+aria-labelledby="8125-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8125" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortfieldtypes %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8126-tab-pane" role="tabpanel"
+aria-labelledby="8126-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8126" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_repkwkwortdata %}
+</div>
+</div>
+
+<div class="tab-pane fade show active" id="8127-tab-pane" role="tabpanel"
+aria-labelledby="8127-tab"
+tabindex="0">
+<h2>业务管理</h2>
+<a href="/config_busi/8127" target="_blank">
+进入业务管理中心
+</a>
+<div>
+数据分析统计
+</div>
+<div>
+{% include 'indextab.html' with tab=tab_mc_supermanager %}
+</div>
+</div>
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+CopyRight ©beta_基于django的周报管理系统
+
+{% endblock %}
+
+{% block script-footer %}
+
+{% endblock %}

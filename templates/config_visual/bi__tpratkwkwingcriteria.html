@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 评分标准表(ratkwkwingcriteria)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_criterianame_pie_v2",'ratkwkwingcriteria.criterianame_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_criterianame_pie_v1",'ratkwkwingcriteria.criterianame_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_criterianame_pie",'ratkwkwingcriteria.criterianame_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** line***/ init_echart("echart_ratkwkwingcriteria_criterianame_line",'ratkwkwingcriteria.criterianame_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_criterianame_bar",'ratkwkwingcriteria.criterianame_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_criterianame_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 评分标准名称 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_criterianame_bar_v1",'ratkwkwingcriteria.criterianame_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_description_pie_v2",'ratkwkwingcriteria.description_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_description_pie_v1",'ratkwkwingcriteria.description_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_description_pie",'ratkwkwingcriteria.description_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** line***/ init_echart("echart_ratkwkwingcriteria_description_line",'ratkwkwingcriteria.description_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_description_bar",'ratkwkwingcriteria.description_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_description_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 描述 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_description_bar_v1",'ratkwkwingcriteria.description_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_pie_v2",'ratkwkwingcriteria.categkwkwory_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_pie_v1",'ratkwkwingcriteria.categkwkwory_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_pie",'ratkwkwingcriteria.categkwkwory_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** line***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_line",'ratkwkwingcriteria.categkwkwory_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_bar",'ratkwkwingcriteria.categkwkwory_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_categkwkwory_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 类别 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_categkwkwory_bar_v1",'ratkwkwingcriteria.categkwkwory_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_weight_pie_v2",'ratkwkwingcriteria.weight_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_weight_pie_v1",'ratkwkwingcriteria.weight_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_weight_pie",'ratkwkwingcriteria.weight_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** line***/ init_echart("echart_ratkwkwingcriteria_weight_line",'ratkwkwingcriteria.weight_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_weight_bar",'ratkwkwingcriteria.weight_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_weight_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 权重 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_weight_bar_v1",'ratkwkwingcriteria.weight_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_createdat_pie_v2",'ratkwkwingcriteria.createdat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_createdat_pie_v1",'ratkwkwingcriteria.createdat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_createdat_pie",'ratkwkwingcriteria.createdat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** line***/ init_echart("echart_ratkwkwingcriteria_createdat_line",'ratkwkwingcriteria.createdat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_createdat_bar",'ratkwkwingcriteria.createdat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_createdat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 创建时间 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_createdat_bar_v1",'ratkwkwingcriteria.createdat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** pie_v2***/ init_echart("echart_ratkwkwingcriteria_updatedat_pie_v2",'ratkwkwingcriteria.updatedat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** pie_v1***/ init_echart("echart_ratkwkwingcriteria_updatedat_pie_v1",'ratkwkwingcriteria.updatedat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_pie" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** pie***/ init_echart("echart_ratkwkwingcriteria_updatedat_pie",'ratkwkwingcriteria.updatedat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_line" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** line***/ init_echart("echart_ratkwkwingcriteria_updatedat_line",'ratkwkwingcriteria.updatedat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_bar" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** bar***/ init_echart("echart_ratkwkwingcriteria_updatedat_bar",'ratkwkwingcriteria.updatedat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_ratkwkwingcriteria_updatedat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 评分标准表 更新时间 ******************** bar_v1***/ init_echart("echart_ratkwkwingcriteria_updatedat_bar_v1",'ratkwkwingcriteria.updatedat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 报表导出记录表(repkwkwortexpkwkwortreckwkwords)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** pie_v2***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie_v2",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** pie_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie_v1",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** pie***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_pie",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_line" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** line***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_line",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** bar***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_bar",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出时间 ******************** bar_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkworttime_bar_v1",'repkwkwortexpkwkwortreckwkwords.expkwkworttime_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** pie_v2***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie_v2",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** pie_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie_v1",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** pie***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_pie",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_line" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** line***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_line",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** bar***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_bar",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出用户 ******************** bar_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortuser_bar_v1",'repkwkwortexpkwkwortreckwkwords.expkwkwortuser_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** pie_v2***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie_v2",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** pie_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie_v1",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** pie***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_pie",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_line" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** line***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_line",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** bar***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_bar",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出格式如PDF ******************** bar_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_expkwkwortkwkwfkwkwormat_bar_v1",'repkwkwortexpkwkwortreckwkwords.expkwkwortkwkwfkwkwormat_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** pie_v2***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_pie_v2",'repkwkwortexpkwkwortreckwkwords.status_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** pie_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_pie_v1",'repkwkwortexpkwkwortreckwkwords.status_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** pie***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_pie",'repkwkwortexpkwkwortreckwkwords.status_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_line" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** line***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_line",'repkwkwortexpkwkwortreckwkwords.status_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** bar***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_bar",'repkwkwortexpkwkwortreckwkwords.status_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_status_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 导出状态如成功、失败 ******************** bar_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_status_bar_v1",'repkwkwortexpkwkwortreckwkwords.status_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** pie_v2***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie_v2",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** pie_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie_v1",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** pie***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_pie",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_line" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** line***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_line",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_bar" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** bar***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_bar",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 报表导出记录表 错误信息如果导出失败 ******************** bar_v1***/ init_echart("echart_repkwkwortexpkwkwortreckwkwords_errkwkwormessage_bar_v1",'repkwkwortexpkwkwortreckwkwords.errkwkwormessage_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+    </div>
+  </body>
+</html>

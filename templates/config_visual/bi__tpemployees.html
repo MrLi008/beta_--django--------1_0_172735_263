@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>beta_基于django的周报管理系统</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <style>
+      body {
+        color: black;
+      }
+      .bkimg {
+        background-image: url('/static/imgs/default.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: opacity(90%);
+        filter: brightness(10%);
+        overflow: hidden;
+      }
+      .myechart_size {
+        height: 450px;
+      }
+      .myechart_size-height-full {
+        with: 95%;
+        height: 480px;
+      }
+    </style>
+    
+    {% include 'config_visual/function_echart.html' %}
+  </head>
+  <body>
+    <div class="bg-image" style="{% include 'config_visual/background.html' %}">
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <h3 style="color:black; font-size: 30px; font-weight: bold;">beta_基于django的周报管理系统 员工表(employees)</h3>
+        </div>
+      </div>
+      {% csrf_token %}
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_employeename_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** pie_v2***/ init_echart("echart_employees_employeename_pie_v2",'employees.employeename_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_employeename_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** pie_v1***/ init_echart("echart_employees_employeename_pie_v1",'employees.employeename_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_employeename_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** pie***/ init_echart("echart_employees_employeename_pie",'employees.employeename_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_employeename_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** line***/ init_echart("echart_employees_employeename_line",'employees.employeename_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_employeename_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** bar***/ init_echart("echart_employees_employeename_bar",'employees.employeename_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_employeename_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 员工姓名 ******************** bar_v1***/ init_echart("echart_employees_employeename_bar_v1",'employees.employeename_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_position_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** pie_v2***/ init_echart("echart_employees_position_pie_v2",'employees.position_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_position_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** pie_v1***/ init_echart("echart_employees_position_pie_v1",'employees.position_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_position_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** pie***/ init_echart("echart_employees_position_pie",'employees.position_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_position_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** line***/ init_echart("echart_employees_position_line",'employees.position_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_position_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** bar***/ init_echart("echart_employees_position_bar",'employees.position_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_position_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 职位 ******************** bar_v1***/ init_echart("echart_employees_position_bar_v1",'employees.position_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_email_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** pie_v2***/ init_echart("echart_employees_email_pie_v2",'employees.email_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_email_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** pie_v1***/ init_echart("echart_employees_email_pie_v1",'employees.email_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_email_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** pie***/ init_echart("echart_employees_email_pie",'employees.email_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_email_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** line***/ init_echart("echart_employees_email_line",'employees.email_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_email_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** bar***/ init_echart("echart_employees_email_bar",'employees.email_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_email_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电子邮件 ******************** bar_v1***/ init_echart("echart_employees_email_bar_v1",'employees.email_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_phonenumber_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** pie_v2***/ init_echart("echart_employees_phonenumber_pie_v2",'employees.phonenumber_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_phonenumber_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** pie_v1***/ init_echart("echart_employees_phonenumber_pie_v1",'employees.phonenumber_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_phonenumber_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** pie***/ init_echart("echart_employees_phonenumber_pie",'employees.phonenumber_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_phonenumber_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** line***/ init_echart("echart_employees_phonenumber_line",'employees.phonenumber_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_phonenumber_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** bar***/ init_echart("echart_employees_phonenumber_bar",'employees.phonenumber_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_phonenumber_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 电话号码 ******************** bar_v1***/ init_echart("echart_employees_phonenumber_bar_v1",'employees.phonenumber_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_startdate_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** pie_v2***/ init_echart("echart_employees_startdate_pie_v2",'employees.startdate_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_startdate_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** pie_v1***/ init_echart("echart_employees_startdate_pie_v1",'employees.startdate_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_startdate_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** pie***/ init_echart("echart_employees_startdate_pie",'employees.startdate_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_startdate_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** line***/ init_echart("echart_employees_startdate_line",'employees.startdate_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_startdate_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** bar***/ init_echart("echart_employees_startdate_bar",'employees.startdate_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_startdate_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 入职日期 ******************** bar_v1***/ init_echart("echart_employees_startdate_bar_v1",'employees.startdate_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+<div class="row">
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_salary_pie_v2" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** pie_v2***/ init_echart("echart_employees_salary_pie_v2",'employees.salary_pie_v2','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_salary_pie_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** pie_v1***/ init_echart("echart_employees_salary_pie_v1",'employees.salary_pie_v1','/config_visual/bi',{},);</script>
+<div class="col-sm-3"><div class="default-echart-border"><div id="echart_employees_salary_pie" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** pie***/ init_echart("echart_employees_salary_pie",'employees.salary_pie','/config_visual/bi',{});</script>
+<div class="col-sm-5"><div class="default-echart-border"><div id="echart_employees_salary_line" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** line***/ init_echart("echart_employees_salary_line",'employees.salary_line','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_salary_bar" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** bar***/ init_echart("echart_employees_salary_bar",'employees.salary_bar','/config_visual/bi',{});</script>
+<div class="col-sm-4"><div class="default-echart-border"><div id="echart_employees_salary_bar_v1" class="myechart_size"></div></div></div>
+<script>/*** 员工表 薪资 ******************** bar_v1***/ init_echart("echart_employees_salary_bar_v1",'employees.salary_bar_v1','/config_visual/bi',{},polar={radius: [30, '80%']});</script>
+</div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
